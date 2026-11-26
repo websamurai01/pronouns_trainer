@@ -1097,12 +1097,13 @@ function matchingRoles(prepId,input){
   const n=N(input);
   return ROLE_IDS.filter(function(r){return acceptedNorm(prepId,r).indexOf(n)>=0;});
 }
+// Spelling only: acceptedForms() also folds 2fp/3fp onto the masculine form,
+// which would make one pointed form match two roles. Do not use it here.
 function matchingRolesExact(prepId,displayedP){
   const T=parseClusters(displayedP);
   return ROLE_IDS.filter(function(r){
-    return acceptedForms(prepId,r).some(function(f){
-      return (f.p&&exact(T,parseClusters(f.p)))||(f.pm&&exact(T,parseClusters(f.pm)));
-    });
+    const f=FORMS[prepId][r];
+    return (f.p&&exact(T,parseClusters(f.p)))||(f.pm&&exact(T,parseClusters(f.pm)));
   });
 }
 function prepPoolForms(prepId,targetRole){
