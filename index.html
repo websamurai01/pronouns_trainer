@@ -280,6 +280,78 @@ body.kb-open .keyboard{transform:translate(-50%,0);visibility:visible;}
 .key-btn.key-back{font-size:18px;color:var(--muted);}
 .key-btn.key-space{font-size:12px;font-weight:800;color:var(--muted);}
 .role-svg,.prep-svg{display:block;}
+.tabs{overflow-x:auto;scrollbar-width:none;}
+.tabs::-webkit-scrollbar{display:none;}
+.tab{flex:1 0 auto;font-size:11px;padding:8px 4px;min-width:58px;}
+.practice-toggles{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;}
+.toggle-chip{background:var(--card2);border:1px solid var(--border);color:var(--muted);border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;justify-content:center;transition:all .18s;}
+.toggle-chip.active{border-color:var(--accent);color:var(--accent);background:rgba(200,101,77,.09);}
+.toggle-chip:active{transform:scale(.96);}
+.toggle-note{font-size:10.5px;line-height:1.4;color:var(--faint);margin:-2px 0 10px;}
+.end-plain{color:inherit;}
+body.end-colors-off #screen-train .he-end,
+body.end-colors-off #screen-phrases .he-end,
+body.end-colors-off #screen-prefix .he-end{color:inherit !important;}
+.nikud-notice{display:none;background:var(--card2);border:1px solid var(--gold);border-radius:12px;padding:9px 12px;margin-top:8px;font-size:12px;line-height:1.5;}
+.nikud-notice-title{font-weight:800;color:var(--gold);margin-bottom:3px;}
+.nikud-readings{font-size:18px;line-height:1.5;}
+.nikud-role{font-size:11px;color:var(--muted);font-weight:700;}
+.nikud-notice-hint{font-size:11px;color:var(--accent2);font-weight:700;margin-top:3px;}
+.keyboard-nikud{display:none;flex-wrap:wrap;gap:5px;direction:rtl;margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);}
+.key-nikud{min-width:44px;height:44px;border:1px solid var(--border);border-radius:10px;background:var(--input-bg);color:var(--text);font-family:var(--hebrew);font-size:20px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .12s,background .15s,border-color .15s;user-select:none;touch-action:manipulation;direction:rtl;}
+.key-nikud:active{transform:scale(.92);background:rgba(200,101,77,.08);border-color:var(--accent);}
+body.kb-open.nikud-row-open{padding-bottom:calc(390px + env(safe-area-inset-bottom));}
+body.kb-open.nikud-row-open .toast{bottom:calc(400px + env(safe-area-inset-bottom));}
+.pfx-mnemonic{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:12px;margin-bottom:12px;box-shadow:var(--shadow-soft);}
+.pfx-mnemonic-title{font-size:13px;font-weight:800;color:var(--accent);margin-bottom:2px;}
+.pfx-mnemonic-intro{font-size:11.5px;color:var(--muted);line-height:1.45;margin-bottom:8px;}
+.pfx-tiles{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:2px;}
+.pfx-tiles::-webkit-scrollbar{display:none;}
+.pfx-tile{flex:0 0 auto;min-width:52px;min-height:62px;border:1px solid var(--border);border-radius:14px;background:var(--card2);color:var(--text);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4px 6px;transition:all .15s;}
+.pfx-tile:active{transform:scale(.95);}
+.pfx-tile-letter{font-family:var(--hebrew);font-size:26px;font-weight:800;line-height:1.1;}
+.pfx-tile-name{font-size:9px;color:var(--muted);font-weight:700;white-space:nowrap;}
+.pfx-rule-card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:14px;padding:10px 12px;margin-bottom:8px;box-shadow:var(--shadow-soft);}
+.pfx-rule-title{font-size:12px;font-weight:800;color:var(--accent2);margin-bottom:3px;}
+.pfx-rule-text{font-size:11.5px;line-height:1.45;color:var(--text);}
+.pfx-examples{display:flex;flex-direction:column;gap:3px;margin-top:6px;}
+.pfx-example{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted);flex-wrap:wrap;}
+.pfx-example .he{font-size:18px;font-weight:700;color:var(--text);}
+.pfx-trap{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--danger);border-radius:14px;padding:10px 12px;margin-bottom:8px;font-size:11.5px;line-height:1.45;}
+.pfx-trap b{color:var(--danger);}
+.pfx-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:14px;box-shadow:var(--shadow-soft);margin-bottom:10px;}
+.pfx-letter-big{font-size:64px;font-weight:800;text-align:center;line-height:1.2;margin:4px 0;color:var(--accent);}
+.pfx-letter-name{text-align:center;font-size:14px;font-weight:800;color:var(--muted);margin-bottom:8px;}
+.pfx-word-big{font-size:34px;font-weight:800;text-align:center;line-height:1.4;margin:4px 0;color:var(--text);}
+.pfx-prompt{text-align:center;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px;}
+.pfx-prompt .he{font-size:22px;color:var(--text);}
+.pfx-badge{display:inline-block;background:rgba(45,125,140,.1);border:1px solid rgba(45,125,140,.25);color:var(--accent2);border-radius:999px;padding:2px 8px;font-size:10px;font-weight:800;margin-inline-start:6px;}
+.pfx-options{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px;}
+.pfx-option{background:var(--card2);border:1.5px solid var(--border);border-radius:14px;min-height:56px;padding:8px;font-size:13px;font-weight:700;cursor:pointer;color:var(--text);display:flex;align-items:center;justify-content:center;text-align:center;transition:all .15s;}
+.pfx-option:active{transform:scale(.96);}
+.pfx-option .he{font-size:22px;font-weight:800;}
+.pfx-option.correct{border-color:var(--olive);background:var(--ok-bg);}
+.pfx-option.wrong{border-color:var(--danger);background:var(--bad-bg);}
+.pfx-option:disabled{opacity:.85;}
+.pfx-build-tiles{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:10px;direction:rtl;}
+.pfx-build-tile{min-width:44px;min-height:52px;border:1px solid var(--border);border-radius:12px;background:var(--card2);display:flex;align-items:center;justify-content:center;padding:4px 8px;font-family:var(--hebrew);font-size:22px;font-weight:800;color:var(--text);direction:rtl;unicode-bidi:isolate;}
+.pfx-build-plus{display:flex;align-items:center;color:var(--faint);font-size:16px;}
+.pfx-note{font-size:10.5px;line-height:1.4;color:var(--muted);background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:7px 9px;margin:8px 0;font-weight:600;}
+.pfx-heat-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:14px;background:var(--card);}
+.pfx-heat-table{border-collapse:separate;border-spacing:0;min-width:520px;width:100%;}
+.pfx-heat-table th,.pfx-heat-table td{padding:0;text-align:center;}
+.pfx-heat-table thead th{padding:6px 3px;background:var(--card2);border-bottom:1px solid var(--border);font-size:10px;font-weight:800;color:var(--muted);}
+.pfx-heat-role{background:var(--card2);padding:5px 6px !important;border-bottom:1px solid var(--border);border-inline-end:1px solid var(--border);}
+.pfx-heat-role .he{font-size:18px;font-weight:800;color:var(--text);}
+.pfx-heat-cell{width:100%;min-width:44px;min-height:44px;border:none;border-bottom:1px solid var(--border);border-inline-end:1px solid var(--border);color:#fff;font-size:10px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;text-shadow:0 1px 2px rgba(0,0,0,.35);}
+html[data-theme="dark"] .pfx-heat-cell{color:#16120f;text-shadow:none;}
+.pfx-progress{display:flex;align-items:center;gap:9px;margin-top:10px;font-size:11px;font-weight:800;color:var(--muted);}
+.pfx-progress-bar{flex:1;height:9px;background:var(--track);border-radius:999px;overflow:hidden;}
+.pfx-progress-fill{height:100%;background:linear-gradient(90deg,var(--olive),var(--accent2));border-radius:999px;width:0%;transition:width .4s;}
+.pfx-stats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;}
+.pfx-stats .stat-pill{flex:1 1 auto;}
+.pfx-decomp{font-size:13px;font-weight:700;line-height:1.4;}
+.pfx-decomp .he{font-size:20px;}
 @media (max-width:380px){.title{font-size:15px;}.tool-btn,.flag-btn{width:36px;height:40px;}.role-grid{gap:7px;}.role-pron{font-size:24px;}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms !important;transition-duration:.001ms !important;}}
 </style>
@@ -303,6 +375,7 @@ body.kb-open .keyboard{transform:translate(-50%,0);visibility:visible;}
     <div class="tab" data-tab="path" data-i18n="tabPath">Путь</div>
     <div class="tab" data-tab="train" data-i18n="tabTrain">Тренировка</div>
     <div class="tab" data-tab="phrases" data-i18n="tabPhrases">Фразы</div>
+    <div class="tab" data-tab="prefix" data-i18n="tabPrefix">Приставки</div>
   </div>
   <div class="progress-wrap">
     <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
@@ -325,6 +398,7 @@ body.kb-open .keyboard{transform:translate(-50%,0);visibility:visible;}
 <main id="screen-path" class="screen"></main>
 <main id="screen-train" class="screen"></main>
 <main id="screen-phrases" class="screen"></main>
+<main id="screen-prefix" class="screen"></main>
 
 <div class="keyboard" id="keyboard" aria-hidden="true">
   <div class="keyboard-head">
@@ -332,6 +406,7 @@ body.kb-open .keyboard{transform:translate(-50%,0);visibility:visible;}
     <button class="keyboard-close" id="btn-keyboard-close" type="button" aria-label="Скрыть клавиатуру">✕</button>
   </div>
   <div class="keyboard-grid" id="keyboard-grid" dir="rtl"></div>
+  <div class="keyboard-nikud" id="keyboard-nikud" dir="rtl"></div>
 </div>
 <div class="toast" id="toast"></div>
 <div class="modal" id="modal">
@@ -412,6 +487,7 @@ const PREP_DATA=[
    ends:['י','ך','ך','ו','ה','נו','כם','כן','ם','ן'],
    U:['איתי','איתך','איתך','איתו','איתה','איתנו','איתכם','איתכן','איתם','איתן'],
    P:['אִתִּי','אִתְּךָ','אִתָּךְ','אִתּוֹ','אִתָּהּ','אִתָּנוּ','אִתְּכֶם','אִתְּכֶן','אִתָּם','אִתָּן'],
+   PM:['אִיתִּי','אִיתְּךָ','אִיתָּךְ','אִיתּוֹ','אִיתָּהּ','אִיתָּנוּ','אִיתְּכֶם','אִיתְּכֶן','אִיתָּם','אִיתָּן'],
    T:['ити','итха','итах','ито','ита','итану','итхем','итхен','итам','итан'],
    meaningRu:'с; двое рядом',
    meaningEn:'with; two people side by side',
@@ -442,6 +518,7 @@ const PREP_DATA=[
    ends:['מני','מך','מך','מנו','מנה','איתנו','כם','כן','הם','הן'],
    U:['ממני','ממך','ממך','ממנו','ממנה','מאיתנו','מכם','מכן','מהם','מהן'],
    P:['מִמֶּנִּי','מִמְּךָ','מִמֵּךְ','מִמֶּנּוּ','מִמֶּנָּה','מֵאִתָּנוּ','מִכֶּם','מִכֶּן','מֵהֶם','מֵהֶן'],
+   PM:['','','','','','מֵאִיתָּנוּ','','','',''],
    T:['мимени','мимха','мимех','мимену','мимена','меитану','микем','микен','меhем','меhен'],
    meaningRu:'от, из; источник',
    meaningEn:'from, out of; source',
@@ -476,12 +553,207 @@ PREP_DATA.forEach(function(p){
   PREPS[p.id]=p;
   FORMS[p.id]={};
   ROLE_IDS.forEach(function(role,i){
-    FORMS[p.id][role]={u:p.U[i],p:p.P[i],t:p.T[i],tEn:romanize(p.T[i]),ru:p.formsRu[i],en:p.formsEn[i]};
+    FORMS[p.id][role]={u:p.U[i],p:p.P[i],pm:(p.PM&&p.PM[i])?p.PM[i]:null,t:p.T[i],tEn:romanize(p.T[i]),ru:p.formsRu[i],en:p.formsEn[i]};
   });
 });
 
 const PRON_BY_ROLE={};
 PRONOUNS.forEach(function(pr){pr.tEn=romanize(pr.t);PRON_BY_ROLE[pr.role]=pr;});
+
+function stripNikud(s){
+  let out='';
+  for(const ch of String(s)){
+    const cp=ch.codePointAt(0);
+    if(cp>=0x0591&&cp<=0x05C7) continue;
+    out+=ch;
+  }
+  return out;
+}
+const PREFIXES=[
+  {id:'מ',nameRu:'мем',nameEn:'mem',meaningRu:'из, от; чем (в сравнении)',meaningEn:'from, out of; than',forms:[
+    {p:'מִ',tr:'ми',tag:'plain',ruleRu:'обычная форма; следующая буква удваивается',ruleEn:'default form; the next letter is doubled'},
+    {p:'מֵ',tr:'ме',tag:'guttural',ruleRu:'перед א/ע',ruleEn:'before א/ע'},
+    {p:'מֵהַ',tr:'меhа',tag:'article',ruleRu:'с артиклем; пишется מה',ruleEn:'with the article; written מה'},
+    {p:'מֵהָ',tr:'меhа',tag:'article',ruleRu:'с артиклем перед א/ע',ruleEn:'with the article before א/ע'}
+  ]},
+  {id:'ש',nameRu:'шин',nameEn:'shin',meaningRu:'что, который, кто (относительное слово)',meaningEn:'that, which, who',forms:[
+    {p:'שֶׁ',tr:'ше',tag:'plain',ruleRu:'относительное слово',ruleEn:'relative word'}
+  ]},
+  {id:'ה',nameRu:'hей',nameEn:'he',meaningRu:'определённый артикль (the)',meaningEn:'the (definite article)',forms:[
+    {p:'הַ',tr:'ха',tag:'article',ruleRu:'обычная форма; следующая буква удваивается',ruleEn:'default form; the next letter is doubled'},
+    {p:'הָ',tr:'ха',tag:'article',ruleRu:'перед א/ע',ruleEn:'before א/ע'}
+  ]},
+  {id:'ו',nameRu:'вав',nameEn:'vav',meaningRu:'и, а',meaningEn:'and',forms:[
+    {p:'וְ',tr:'ве',tag:'plain',ruleRu:'обычная форма; с артиклем וְהַ',ruleEn:'default form; with the article וְהַ'},
+    {p:'וּ',tr:'у',tag:'u',ruleRu:'перед ב, מ, פ и перед шва',ruleEn:'before ב, מ, פ and before shva'},
+    {p:'וִ',tr:'ви',tag:'yod',ruleRu:'перед י со шва',ruleEn:'before י with shva'},
+    {p:'וַ',tr:'ва',tag:'plain',noQuiz:true,ruleRu:'перед хатаф-патах, например וַאֲנִי «и я»; только справочник',ruleEn:'before hataf-patah, e.g. וַאֲנִי “and I”; reference only'}
+  ]},
+  {id:'כ',nameRu:'каф',nameEn:'kaf',meaningRu:'как, подобно; около',meaningEn:'like, as; about',forms:[
+    {p:'כְּ',tr:'ке',tag:'plain',ruleRu:'обычная форма',ruleEn:'default form'},
+    {p:'כַּ',tr:'ка',tag:'article',ruleRu:'с артиклем',ruleEn:'with the article'},
+    {p:'כָּ',tr:'ка',tag:'article',ruleRu:'с артиклем перед א/ע',ruleEn:'with the article before א/ע'},
+    {p:'כִּ',tr:'ки',tag:'sheva',ruleRu:'перед шва; перед י со шва',ruleEn:'before shva; before י with shva'}
+  ]},
+  {id:'ל',nameRu:'ламед',nameEn:'lamed',meaningRu:'к, для, в (куда); кому',meaningEn:'to, for',forms:[
+    {p:'לְ',tr:'ле',tag:'plain',ruleRu:'обычная форма',ruleEn:'default form'},
+    {p:'לַ',tr:'ла',tag:'article',ruleRu:'с артиклем',ruleEn:'with the article'},
+    {p:'לָ',tr:'ла',tag:'article',ruleRu:'с артиклем перед א/ע',ruleEn:'with the article before א/ע'},
+    {p:'לִ',tr:'ли',tag:'sheva',ruleRu:'перед шва; перед י со шва',ruleEn:'before shva; before י with shva'}
+  ]},
+  {id:'ב',nameRu:'бет',nameEn:'bet',meaningRu:'в, на, при; с помощью',meaningEn:'in, at, on; by means of',forms:[
+    {p:'בְּ',tr:'бе',tag:'plain',ruleRu:'обычная форма',ruleEn:'default form'},
+    {p:'בַּ',tr:'ба',tag:'article',ruleRu:'с артиклем',ruleEn:'with the article'},
+    {p:'בָּ',tr:'ба',tag:'article',ruleRu:'с артиклем перед א/ע',ruleEn:'with the article before א/ע'},
+    {p:'בִּ',tr:'би',tag:'sheva',ruleRu:'перед шва; перед י со шва',ruleEn:'before shva; before י with shva'}
+  ]}
+];
+const PFX_WORDS=[
+  {id:'bayit',p:'בַּיִת',u:'בית',tr:'байт',ru:'дом',en:'house',article:true},
+  {id:'sefer',p:'סֵפֶר',u:'ספר',tr:'сефер',ru:'книга',en:'book',article:true},
+  {id:'yeled',p:'יֶלֶד',u:'ילד',tr:'елед',ru:'ребёнок',en:'child',article:true},
+  {id:'perach',p:'פֶּרַח',u:'פרח',tr:'перах',ru:'цветок',en:'flower',article:true},
+  {id:'medina',p:'מְדִינָה',u:'מדינה',tr:'мдина',ru:'государство',en:'state, country',article:true},
+  {id:'yerushalayim',p:'יְרוּשָׁלַיִם',u:'ירושלים',tr:'ирушалайим',ru:'Иерусалим',en:'Jerusalem',article:false},
+  {id:'adam',p:'אָדָם',u:'אדם',tr:'адам',ru:'человек',en:'person',article:true},
+  {id:'ir',p:'עִיר',u:'עיר',tr:'ир',ru:'город',en:'city',article:true}
+];
+const PFX_TABLE=[
+  {wordId:'bayit',rows:{
+    'ב':['בְּבַיִת [בְּ] {plain} бевайт','בַּבַּיִת [בַּ] {article} бабайт'],
+    'ל':['לְבַיִת [לְ] {plain} левайт','לַבַּיִת [לַ] {article} лабайт'],
+    'כ':['כְּבַיִת [כְּ] {plain} кевайт','כַּבַּיִת [כַּ] {article} кабайт'],
+    'מ':['מִבַּיִת [מִ] {plain} мибайт','מֵהַבַּיִת [מֵהַ] {article} меhабайт'],
+    'ו':['וּבַיִת [וּ] {u} увайт','וְהַבַּיִת [וְ] {article} веhабайт'],
+    'ה':[null,'הַבַּיִת [הַ] {article} хабайт']
+  }},
+  {wordId:'sefer',rows:{
+    'ב':['בְּסֵפֶר [בְּ] {plain} бесефер','בַּסֵּפֶר [בַּ] {article} басефер'],
+    'ל':['לְסֵפֶר [לְ] {plain} лесефер','לַסֵּפֶר [לַ] {article} ласефер'],
+    'כ':['כְּסֵפֶר [כְּ] {plain} кесефер','כַּסֵּפֶר [כַּ] {article} касефер'],
+    'מ':['מִסֵּפֶר [מִ] {plain} мисефер','מֵהַסֵּפֶר [מֵהַ] {article} меhасефер'],
+    'ו':['וְסֵפֶר [וְ] {plain} весефер','וְהַסֵּפֶר [וְ] {article} веhасефер'],
+    'ה':[null,'הַסֵּפֶר [הַ] {article} хасефер']
+  }},
+  {wordId:'yeled',rows:{
+    'ב':['בְּיֶלֶד [בְּ] {plain} бейелед','בַּיֶּלֶד [בַּ] {article} байелед'],
+    'ל':['לְיֶלֶד [לְ] {plain} лейелед','לַיֶּלֶד [לַ] {article} лайелед'],
+    'כ':['כְּיֶלֶד [כְּ] {plain} кейелед','כַּיֶּלֶד [כַּ] {article} кайелед'],
+    'מ':['מִיֶּלֶד [מִ] {plain} мийелед','מֵהַיֶּלֶד [מֵהַ] {article} меhайелед'],
+    'ו':['וְיֶלֶד [וְ] {plain} вейелед','וְהַיֶּלֶד [וְ] {article} веhайелед'],
+    'ה':[null,'הַיֶּלֶד [הַ] {article} хайелед']
+  }},
+  {wordId:'perach',rows:{
+    'ב':['בְּפֶרַח [בְּ] {plain} беферах','בַּפֶּרַח [בַּ] {article} баперах'],
+    'ל':['לְפֶרַח [לְ] {plain} леферах','לַפֶּרַח [לַ] {article} лаперах'],
+    'כ':['כְּפֶרַח [כְּ] {plain} кеферах','כַּפֶּרַח [כַּ] {article} каперах'],
+    'מ':['מִפֶּרַח [מִ] {plain} миперах','מֵהַפֶּרַח [מֵהַ] {article} меhаперах'],
+    'ו':['וּפֶרַח [וּ] {u} уперах','וְהַפֶּרַח [וְ] {article} веhаперах'],
+    'ה':[null,'הַפֶּרַח [הַ] {article} хаперах']
+  }},
+  {wordId:'medina',rows:{
+    'ב':['בִּמְדִינָה [בִּ] {sheva} бимдина','בַּמְּדִינָה [בַּ] {article} бамедина'],
+    'ל':['לִמְדִינָה [לִ] {sheva} лимдина','לַמְּדִינָה [לַ] {article} ламедина'],
+    'כ':['כִּמְדִינָה [כִּ] {sheva} кимдина','כַּמְּדִינָה [כַּ] {article} камедина'],
+    'מ':['מִמְּדִינָה [מִ] {sheva} мимдина','מֵהַמְּדִינָה [מֵהַ] {article} меhамедина'],
+    'ו':['וּמְדִינָה [וּ] {u} умдина','וְהַמְּדִינָה [וְ] {article} веhамедина'],
+    'ה':[null,'הַמְּדִינָה [הַ] {article} хамедина']
+  }},
+  {wordId:'yerushalayim',rows:{
+    'ב':['בִּירוּשָׁלַיִם [בִּ] {yod} бирушалайим',null],
+    'ל':['לִירוּשָׁלַיִם [לִ] {yod} лирушалайим',null],
+    'כ':['כִּירוּשָׁלַיִם [כִּ] {yod} кирушалайим',null],
+    'מ':['מִירוּשָׁלַיִם [מִ] {yod} мирушалайим',null],
+    'ו':['וִירוּשָׁלַיִם [וִ] {yod} вирушалайим',null]
+  }},
+  {wordId:'adam',rows:{
+    'ב':['בְּאָדָם [בְּ] {plain} беадам','בָּאָדָם [בָּ] {article} баадам'],
+    'ל':['לְאָדָם [לְ] {plain} леадам','לָאָדָם [לָ] {article} лаадам'],
+    'כ':['כְּאָדָם [כְּ] {plain} кеадам','כָּאָדָם [כָּ] {article} каадам'],
+    'מ':['מֵאָדָם [מֵ] {guttural} меадам','מֵהָאָדָם [מֵהָ] {article} меhаадам'],
+    'ו':['וְאָדָם [וְ] {plain} веадам','וְהָאָדָם [וְ] {article} веhаадам'],
+    'ה':[null,'הָאָדָם [הָ] {article} хаадам']
+  }},
+  {wordId:'ir',rows:{
+    'ב':['בְּעִיר [בְּ] {plain} беир','בָּעִיר [בָּ] {article} баир'],
+    'ל':['לְעִיר [לְ] {plain} леир','לָעִיר [לָ] {article} лаир'],
+    'כ':['כְּעִיר [כְּ] {plain} кеир','כָּעִיר [כָּ] {article} каир'],
+    'מ':['מֵעִיר [מֵ] {guttural} меир','מֵהָעִיר [מֵהָ] {article} меhаир'],
+    'ו':['וְעִיר [וְ] {plain} веир','וְהָעִיר [וְ] {article} веhаир'],
+    'ה':[null,'הָעִיר [הָ] {article} хаир']
+  }}
+];
+const PFX_COMBOS=[
+  {id:'c1',prefixes:['ו','ב','ה'],p:'וּבַבַּיִת',tr:'увабайт',word:'בית',wordP:'בַּיִת',art:true,ru:'и в доме',en:'and in the house'},
+  {id:'c2',prefixes:['ו','ל','ה'],p:'וְלַיֶּלֶד',tr:'велайелед',word:'ילד',wordP:'יֶלֶד',art:true,ru:'и ребёнку',en:'and to the child'},
+  {id:'c3',prefixes:['ו','מ','ה'],p:'וּמֵהַסֵּפֶר',tr:'умеhасефер',word:'ספר',wordP:'סֵפֶר',art:true,ru:'и из книги',en:'and from the book'},
+  {id:'c4',prefixes:['ו','כ','ה'],p:'וְכָאָדָם',tr:'векаадам',word:'אדם',wordP:'אָדָם',art:true,ru:'и как человек',en:'and like a person'},
+  {id:'c5',prefixes:['ו','ל','ה'],p:'וְלָעִיר',tr:'велаир',word:'עיר',wordP:'עִיר',art:true,ru:'и в город',en:'and to the city'},
+  {id:'c6',prefixes:['ש','ב','ה'],p:'שֶׁבַּבַּיִת',tr:'шебабайт',word:'בית',wordP:'בַּיִת',art:true,ru:'что в доме',en:'that is in the house'},
+  {id:'c7',prefixes:['ו','ב'],p:'וּבִירוּשָׁלַיִם',tr:'увирушалайим',word:'ירושלים',wordP:'יְרוּשָׁלַיִם',art:false,ru:'и в Иерусалиме',en:'and in Jerusalem'}
+];
+const PFX_PHRASES=[
+  {id:1,he:'אני גר ___.',answer:'בִּירוּשָׁלַיִם',ru:'Я живу в Иерусалиме',en:'I live in Jerusalem',tag:'yod'},
+  {id:2,he:'הספר נמצא ___.',answer:'בַּבַּיִת',ru:'Книга лежит в (этом) доме',en:'The book is in the house',tag:'article'},
+  {id:3,he:'הוא יצא ___.',answer:'מֵהַבַּיִת',ru:'Он вышел из дома',en:'He left the house',tag:'article'},
+  {id:4,he:'אנחנו נוסעים ___.',answer:'לָעִיר',ru:'Мы едем в город',en:'We are travelling to the city',tag:'article'},
+  {id:5,he:'אני נותן את זה ___.',answer:'לַיֶּלֶד',ru:'Я даю это ребёнку',en:'I give this to the child',tag:'article'},
+  {id:6,he:'הוא מדבר ___.',answer:'כְּיֶלֶד',ru:'Он говорит как ребёнок',en:'He talks like a child',tag:'plain'},
+  {id:7,he:'אני יודע ___ בא.',answer:'שֶׁהוּא',ru:'Я знаю, что он пришёл',en:'I know that he came',tag:'pron'},
+  {id:8,he:'הם גרים ___.',answer:'בַּמְּדִינָה',ru:'Они живут в (этой) стране',en:'They live in the country',tag:'article'},
+  {id:9,he:'הוא קרא ___.',answer:'מֵהַסֵּפֶר',ru:'Он читал из книги',en:'He read from the book',tag:'article'},
+  {id:10,he:'ראיתי ילד ___.',answer:'וּפֶרַח',ru:'Я видел ребёнка и цветок',en:'I saw a child and a flower',tag:'u'},
+  {id:11,he:'הוא בא ___.',answer:'מִירוּשָׁלַיִם',ru:'Он пришёл из Иерусалима',en:'He came from Jerusalem',tag:'yod'},
+  {id:12,he:'הוא מאמין ___.',answer:'בָּאָדָם',ru:'Он верит в человека',en:'He believes in people',tag:'article'},
+  {id:13,he:'הם באו ___.',answer:'מֵהָעִיר',ru:'Они пришли из города',en:'They came from the city',tag:'article'},
+  {id:14,he:'אני יודע ___ יש אור.',answer:'שֶׁבַּבַּיִת',ru:'Я знаю, что в доме есть свет',en:'I know that there is light in the house',tag:'combo'}
+];
+const PFX_TRAPS=[
+  {ru:'ב/ל/כ + артикль: ה исчезает, а в тексте без огласовок «в доме» и «в каком-то доме» пишутся одинаково (בבית), разницу даёт огласовка (בְּבַיִת / בַּבַּיִת).',en:'ב/ל/כ + article: ה disappears, and without niqqud “in the house” and “in a house” look the same (בבית); niqqud shows the difference (בְּבַיִת / בַּבַּיִת).'},
+  {ru:'מ + ה пишется как מה: מהבית.',en:'מ + ה is written מה: מהבית.'},
+  {ru:'ש (что) и של (принадлежность) не путать.',en:'Do not confuse ש (that) and של (belonging).'},
+  {ru:'ו становится וּ перед ב, מ, פ и перед шва.',en:'ו becomes וּ before ב, מ, פ and before shva.'},
+  {ru:'ה-артикль не путать с ה-вопросительной/буквой слова.',en:'Do not confuse the article ה with interrogative ה or a letter of the word.'}
+];
+const PFX_ITEMS=[];
+const PFX_BY_ID={};
+function pfxGloss(prefix,wordRu,wordEn,art){
+  const gRu={'ב':'в','ל':'к/для','כ':'как','מ':'из','ו':'и','ה':'the','ש':'что/который'}[prefix]||'';
+  const gEn={'ב':'in','ל':'to/for','כ':'like','מ':'from','ו':'and','ה':'the','ש':'that/which'}[prefix]||'';
+  if(prefix==='ה') return {ru:'определённый артикль: '+wordRu,en:'the '+wordEn};
+  if(art) return {ru:gRu+' (этот/эта) '+wordRu,en:gEn+' the '+wordEn};
+  return {ru:gRu+' '+wordRu,en:gEn+' '+wordEn};
+}
+function pfxRuleFor(prefix,pfxForm,tag){
+  const p=PREFIXES.find(function(x){return x.id===prefix;});
+  if(!p) return {ru:'',en:''};
+  const f=p.forms.find(function(x){return x.p===pfxForm;})||p.forms.find(function(x){return x.tag===tag;})||p.forms[0];
+  return {ru:f.ruleRu,en:f.ruleEn};
+}
+function addPfxItem(it){PFX_ITEMS.push(it);PFX_BY_ID[it.id]=it;}
+PFX_TABLE.forEach(function(row){
+  const w=PFX_WORDS.find(function(x){return x.id===row.wordId;});
+  if(!w) return;
+  Object.keys(row.rows).forEach(function(prefix){
+    row.rows[prefix].forEach(function(raw){
+      if(!raw||raw==='—') return;
+      const m=raw.match(/^(\S+)\s+\[(\S+)\]\s+\{(\w+)\}\s+(.+)$/);
+      if(!m) return;
+      const tag=m[3];
+      const art=tag==='article';
+      const gl=pfxGloss(prefix,w.ru,w.en,art);
+      const rule=pfxRuleFor(prefix,m[2],tag);
+      addPfxItem({id:'w_'+w.id+'_'+prefix+'_'+(art?'art':'plain'),prefix:prefix,prefixes:[prefix],p:m[1],u:stripNikud(m[1]),tr:m[4],word:w.u,wordP:w.p,art:art,pfxForm:m[2],tag:tag,group:prefix+'|'+w.u,key:'pfx:'+prefix+':'+tag,glossRu:gl.ru,glossEn:gl.en,ruleRu:rule.ru,ruleEn:rule.en});
+    });
+  });
+});
+PFX_COMBOS.forEach(function(c){
+  addPfxItem({id:'combo_'+c.id,prefix:c.prefixes[0],prefixes:c.prefixes.slice(),p:c.p,u:stripNikud(c.p),tr:c.tr,word:c.word,wordP:c.wordP,art:c.art,pfxForm:c.prefixes.join(''),tag:'combo',group:'combo|'+c.id,key:'pfx:'+c.prefixes[0]+':combo',glossRu:c.ru,glossEn:c.en,ruleRu:'несколько приставок',ruleEn:'several prefixes'});
+});
+PRONOUNS.forEach(function(pr){
+  const p='שֶׁ'+pr.p;
+  addPfxItem({id:'pron_'+pr.role,prefix:'ש',prefixes:['ש'],p:p,u:stripNikud(p),tr:'ше'+pr.t,word:pr.u,wordP:pr.p,art:false,pfxForm:'שֶׁ',tag:'pron',group:'pron',key:'pfx:ש:pron',glossRu:'что/который: '+ROLE_LABEL_RU[pr.role],glossEn:'that/which: '+ROLE_LABEL_EN[pr.role],ruleRu:'ש + местоимение',ruleEn:'ש + pronoun'});
+});
 
 const KEY_ENDINGS={
   '1s':['י'],'2ms':['ך'],'2fs':['ך'],'3ms':['ו'],'3fs':['ה'],
@@ -603,7 +875,27 @@ const I18N={
     hintRu:'Русский перевод',trapCard:'Ловушка русского',settingsSaved:'Настройки сохранены',exported:'Файл сохранён',frameBlank:'___',
     speakerSays:'говорит',targetIs:'Кому/о ком речь:',perspectiveIntro:'Роль зависит от того, кто смотрит.',weakEmpty:'Нет элементов по этому фильтру',noVoiceHidden:'Озвучка скрыта: нет еврейского голоса',
     importPrompt:'Выбери JSON-файл прогресса',endingLabel:'Окончание',roleLabel:'Роль',prepLabel:'Предлог',formLabel:'Форма',statsLabel:'Статистика',
-    roleQuestion:'Какая роль?',endingQuestion:'Какое окончание?',listenQuestion:'Послушай и выбери роль',buildQuestion:'Собери форму',chooseForm:'Выбери форму'
+    roleQuestion:'Какая роль?',endingQuestion:'Какое окончание?',listenQuestion:'Послушай и выбери роль',buildQuestion:'Собери форму',chooseForm:'Выбери форму',
+    tabPrefix:'Приставки',
+    pfxSubRef:'Справочник',pfxSubTrain:'Тренажёр',pfxSubMap:'Карта',
+    pfxMnemonicTitle:'משה וכלב — Моше и Калев',pfxMnemonicIntro:'Семь букв-приставок в порядке мнемоники. Тап по плитке — формы и примеры.',
+    pfxRulesTitle:'Правила',pfxTrapsTitle:'Ловушки',
+    pfxTrainTitle:'Тренажёр приставок',pfxFilters:'Фильтры',
+    pfxFilterPrefixes:'Приставки',pfxFilterTags:'Условие',pfxFilterForms:'Форма',pfxFilterWeak:'Только слабые',pfxFilterNotAuto:'Только не в автомате',pfxFilterReset:'Сбросить фильтры',
+    pfxModeLetter:'Буква → значение',pfxModeBuild:'Собери слово',pfxModeForm:'Какая форма?',pfxModeParse:'Разбор',pfxModeSpeed:'Скорость',pfxModePhrases:'Фразы',
+    pfxLetterQuestion:'Что означает эта приставка?',pfxMeaningQuestion:'Какая это приставка?',pfxBuildQuestion:'Собери слово',pfxFormQuestion:'Какая форма приставки?',pfxParseQuestion:'Выбери разбор',
+    pfxArticle:'с артиклем',pfxNoArticle:'без артикля',pfxPrefixLabel:'Приставка',pfxWordLabel:'Слово',pfxRuleLabel:'Правило',pfxExamples:'Примеры',
+    pfxBuildNote:'Без огласовок «с артиклем» и «без артикля» у ב/ל/כ пишутся одинаково — добавляй огласовку.',pfxEmpty:'Нет элементов по этому фильтру',
+    pfxSpeedStart:'Начать 60 секунд',pfxSpeedDone:'Время вышло',pfxSpeedCorrect:'Верных',pfxSpeedBest:'Рекорд',pfxSpeedNewRecord:'Новый рекорд!',
+    pfxPhrasesTitle:'Фразы с приставками',pfxPhraseChoice:'Выбор',pfxPhraseType:'Набор',pfxPhraseHint:'Подсказка',pfxPhraseNext:'Дальше',
+    pfxHeatTitle:'Карта приставок',pfxHeatIntro:'Строки — приставки, столбцы — условия. Тап по клетке — примеры и статистика.',pfxProgress:'Прогресс приставок',pfxMastered:'освоено',
+    pfxTagPlain:'обычная форма',pfxTagArticle:'с артиклем ה',pfxTagSheva:'перед шва',pfxTagYod:'перед י со шва',pfxTagGuttural:'перед א/ע',pfxTagU:'ו → וּ',pfxTagCombo:'несколько приставок',pfxTagPron:'ש + местоимение',
+    endColorsLabel:'Цвет окончаний',endColorsOn:'вкл',endColorsOff:'выкл',
+    nikudCheckLabel:'Огласовки в ответе',nikudCheckAuto:'авто',nikudCheckOff:'выкл',nikudCheckSmart:'различать',nikudCheckFull:'полностью',
+    nikudCheckAutoNote:'При «авто» проверка включается, когда огласовки показываются «всегда».',
+    nikudNoticeTitle:'Эта запись читается по-разному',nikudNeed:'Нужна огласовка.',nikudWrong:'Согласные верны, огласовка другая.',nikudWrongConsonants:'Согласные не совпали.',youTyped:'ты ввёл:',addNikud:'добавь огласовку',ambiguousReadings:'прочтения:',
+    nikudPatah:'патах',nikudQamats:'камац',nikudTsere:'цере',nikudSegol:'сеголь',nikudHiriq:'хирик',nikudHolam:'холам',nikudQubuts:'кубуц',nikudShva:'шва',nikudHatafPatah:'хатаф-патах',nikudHatafSegol:'хатаф-сеголь',nikudHatafQamats:'хатаф-камац',nikudDagesh:'дагеш',
+    pfxCorrectAnswer:'Правильный разбор:',pfxFullForm:'Форма целиком:',pfxDecomp:'Разбор:'
   },
   en:{
     appTitle:'Hebrew · Pronouns',tabMap:'Map',tabPath:'Path',tabTrain:'Practice',tabPhrases:'Phrases',
@@ -634,7 +926,27 @@ const I18N={
     hintRu:'Russian translation',trapCard:'Russian trap',settingsSaved:'Settings saved',exported:'File saved',frameBlank:'___',
     speakerSays:'says',targetIs:'Who is meant:',perspectiveIntro:'The role depends on who is looking.',weakEmpty:'No items match this filter',noVoiceHidden:'Audio hidden: no Hebrew voice',
     importPrompt:'Choose a progress JSON file',endingLabel:'Ending',roleLabel:'Role',prepLabel:'Preposition',formLabel:'Form',statsLabel:'Statistics',
-    roleQuestion:'Which role?',endingQuestion:'Which ending?',listenQuestion:'Listen and choose the role',buildQuestion:'Build the form',chooseForm:'Choose the form'
+    roleQuestion:'Which role?',endingQuestion:'Which ending?',listenQuestion:'Listen and choose the role',buildQuestion:'Build the form',chooseForm:'Choose the form',
+    tabPrefix:'Prefixes',
+    pfxSubRef:'Reference',pfxSubTrain:'Trainer',pfxSubMap:'Map',
+    pfxMnemonicTitle:'משה וכלב — Moshe and Kalev',pfxMnemonicIntro:'Seven prefix letters in mnemonic order. Tap a tile for forms and examples.',
+    pfxRulesTitle:'Rules',pfxTrapsTitle:'Traps',
+    pfxTrainTitle:'Prefix trainer',pfxFilters:'Filters',
+    pfxFilterPrefixes:'Prefixes',pfxFilterTags:'Condition',pfxFilterForms:'Form',pfxFilterWeak:'Weak only',pfxFilterNotAuto:'Not automatic yet',pfxFilterReset:'Reset filters',
+    pfxModeLetter:'Letter → meaning',pfxModeBuild:'Build the word',pfxModeForm:'Which form?',pfxModeParse:'Parse',pfxModeSpeed:'Speed',pfxModePhrases:'Phrases',
+    pfxLetterQuestion:'What does this prefix mean?',pfxMeaningQuestion:'Which prefix is it?',pfxBuildQuestion:'Build the word',pfxFormQuestion:'Which prefix form?',pfxParseQuestion:'Choose the parsing',
+    pfxArticle:'with the article',pfxNoArticle:'without the article',pfxPrefixLabel:'Prefix',pfxWordLabel:'Word',pfxRuleLabel:'Rule',pfxExamples:'Examples',
+    pfxBuildNote:'Without niqqud “with the article” and “without the article” look the same for ב/ל/כ — add niqqud.',pfxEmpty:'No items match this filter',
+    pfxSpeedStart:'Start 60 seconds',pfxSpeedDone:'Time is up',pfxSpeedCorrect:'Correct',pfxSpeedBest:'Record',pfxSpeedNewRecord:'New record!',
+    pfxPhrasesTitle:'Prefix phrases',pfxPhraseChoice:'Choice',pfxPhraseType:'Type',pfxPhraseHint:'Hint',pfxPhraseNext:'Next',
+    pfxHeatTitle:'Prefix map',pfxHeatIntro:'Rows are prefixes, columns are conditions. Tap a cell for examples and statistics.',pfxProgress:'Prefix progress',pfxMastered:'mastered',
+    pfxTagPlain:'default form',pfxTagArticle:'with the article ה',pfxTagSheva:'before shva',pfxTagYod:'before י with shva',pfxTagGuttural:'before א/ע',pfxTagU:'ו → וּ',pfxTagCombo:'several prefixes',pfxTagPron:'ש + pronoun',
+    endColorsLabel:'Ending colors',endColorsOn:'on',endColorsOff:'off',
+    nikudCheckLabel:'Niqqud in answers',nikudCheckAuto:'auto',nikudCheckOff:'off',nikudCheckSmart:'distinguish',nikudCheckFull:'full',
+    nikudCheckAutoNote:'In “auto”, checking turns on when niqqud is shown “always”.',
+    nikudNoticeTitle:'This spelling has several readings',nikudNeed:'Niqqud required.',nikudWrong:'Consonants are correct, but the niqqud is different.',nikudWrongConsonants:'Consonants do not match.',youTyped:'you typed:',addNikud:'add niqqud',ambiguousReadings:'readings:',
+    nikudPatah:'patah',nikudQamats:'qamats',nikudTsere:'tsere',nikudSegol:'segol',nikudHiriq:'hiriq',nikudHolam:'holam',nikudQubuts:'qubuts',nikudShva:'shva',nikudHatafPatah:'hataf patah',nikudHatafSegol:'hataf segol',nikudHatafQamats:'hataf qamats',nikudDagesh:'dagesh',
+    pfxCorrectAnswer:'Correct parsing:',pfxFullForm:'Full form:',pfxDecomp:'Parsing:'
   }
 };
 
@@ -669,6 +981,20 @@ let phraseQueue=[];
 let phrasePos=0;
 let phraseAnswered=false;
 let phraseHintShown=false;
+let currentPrefixSub='ref';
+let pfxMode='letter';
+let pfxLetterDir='letter2meaning';
+let pfxPhraseMode='choice';
+let pfxQ=null;
+let pfxAnswered=false;
+let pfxHintShown=false;
+let pfxStart=0;
+let pfxHistory=[];
+let pfxSpeedState=null;
+let pfxPhraseQueue=[];
+let pfxPhrasePos=0;
+let pfxPhraseAnswered=false;
+let pfxPhraseHintShown=false;
 
 function t(key,vars){
   const dict=I18N[currentLang]||I18N.ru;
@@ -679,6 +1005,8 @@ function t(key,vars){
 }
 function roleLabel(role){return currentLang==='en'?ROLE_LABEL_EN[role]:ROLE_LABEL_RU[role];}
 function translitOf(f){return currentLang==='en'?f.tEn:f.t;}
+function trText(f){return settings.translit?translitOf(f):'';}
+function trDiv(f,cls){const s=trText(f);return s?'<div class="'+cls+'">'+s+'</div>':'';}
 function prepMeaning(p){return currentLang==='en'?p.meaningEn:p.meaningRu;}
 function glossOf(prepId,role){const f=FORMS[prepId][role];return currentLang==='en'?f.en:f.ru;}
 function personClass(role){return 'role-'+ROLE_META[role].p;}
@@ -688,7 +1016,7 @@ function saveLang(){try{localStorage.setItem(LS_LANG,currentLang);}catch(e){}}
 function loadStats(){try{const raw=localStorage.getItem(LS_STATS);if(!raw)return {};const o=JSON.parse(raw);return o&&typeof o==='object'?o:{};}catch(e){return {};}}
 function saveStats(){try{localStorage.setItem(LS_STATS,JSON.stringify(stats));}catch(e){}}
 function loadSettings(){
-  const def={nikud:'hint',translit:true,register:'colloquial',sound:true,strictPath:false,score:0,streak:0,bestStreak:0};
+  const def={nikud:'hint',translit:true,register:'colloquial',sound:true,strictPath:false,score:0,streak:0,bestStreak:0,endColors:true,nikudCheck:'auto',pfxFilter:{prefixes:[],tags:[],forms:[],weak:false,notAuto:false}};
   try{
     const raw=localStorage.getItem(LS_SETTINGS);
     if(!raw)return def;
@@ -696,6 +1024,14 @@ function loadSettings(){
     const merged=Object.assign(def,o&&typeof o==='object'?o:{});
     if(['always','hint','off'].indexOf(merged.nikud)<0) merged.nikud='hint';
     if(['colloquial','strict'].indexOf(merged.register)<0) merged.register='colloquial';
+    if(typeof merged.endColors!=='boolean') merged.endColors=true;
+    if(['auto','off','smart','full'].indexOf(merged.nikudCheck)<0) merged.nikudCheck='auto';
+    if(!merged.pfxFilter||typeof merged.pfxFilter!=='object') merged.pfxFilter={prefixes:[],tags:[],forms:[],weak:false,notAuto:false};
+    if(!Array.isArray(merged.pfxFilter.prefixes)) merged.pfxFilter.prefixes=[];
+    if(!Array.isArray(merged.pfxFilter.tags)) merged.pfxFilter.tags=[];
+    if(!Array.isArray(merged.pfxFilter.forms)) merged.pfxFilter.forms=[];
+    if(typeof merged.pfxFilter.weak!=='boolean') merged.pfxFilter.weak=false;
+    if(typeof merged.pfxFilter.notAuto!=='boolean') merged.pfxFilter.notAuto=false;
     return merged;
   }catch(e){return def;}
 }
@@ -737,24 +1073,49 @@ function splitNikud(prepId,role){
   if(idx<0) return {stemP:'',endP:f.p};
   return {stemP:f.p.slice(0,idx),endP:f.p.slice(idx)};
 }
-function baseAccepted(prepId,role){
-  const arr=[FORMS[prepId][role].u];
-  if(prepId==='min'&&role==='1p') arr.push('ממנו');
-  return arr;
-}
 function acceptedForms(prepId,role){
-  let arr=baseAccepted(prepId,role).slice();
+  const f=FORMS[prepId][role];
+  let arr=[{u:f.u,p:f.p,pm:f.pm||null,label:roleLabel(role)}];
+  if(prepId==='min'&&role==='1p') arr.push({u:'ממנו',p:FORMS['min']['3ms'].p,pm:null,label:roleLabel(role)});
   if(settings&&settings.register==='colloquial'){
-    if(role==='2fp') arr=arr.concat(baseAccepted(prepId,'2mp'));
-    if(role==='3fp') arr=arr.concat(baseAccepted(prepId,'3mp'));
+    if(role==='2fp') arr=arr.concat(acceptedForms(prepId,'2mp'));
+    if(role==='3fp') arr=arr.concat(acceptedForms(prepId,'3mp'));
   }
   return arr;
 }
-function acceptedNorm(prepId,role){return acceptedForms(prepId,role).map(N);}
+function acceptedNorm(prepId,role){
+  const arr=[];
+  acceptedForms(prepId,role).forEach(function(f){
+    arr.push(N(f.u));
+    if(f.p) arr.push(N(f.p));
+    if(f.pm) arr.push(N(f.pm));
+  });
+  return arr;
+}
 function matchesRole(prepId,role,input){return acceptedNorm(prepId,role).indexOf(N(input))>=0;}
 function matchingRoles(prepId,input){
   const n=N(input);
   return ROLE_IDS.filter(function(r){return acceptedNorm(prepId,r).indexOf(n)>=0;});
+}
+function matchingRolesExact(prepId,displayedP){
+  const T=parseClusters(displayedP);
+  return ROLE_IDS.filter(function(r){
+    return acceptedForms(prepId,r).some(function(f){
+      return (f.p&&exact(T,parseClusters(f.p)))||(f.pm&&exact(T,parseClusters(f.pm)));
+    });
+  });
+}
+function prepPoolForms(prepId,targetRole){
+  const exclude=new Set([targetRole]);
+  if(prepId==='min'&&targetRole==='1p') exclude.add('3ms');
+  if(settings&&settings.register==='colloquial'){
+    if(targetRole==='2fp') exclude.add('2mp');
+    if(targetRole==='3fp') exclude.add('3mp');
+  }
+  return ROLE_IDS.filter(function(r){return !exclude.has(r);}).map(function(r){
+    const f=FORMS[prepId][r];
+    return {u:f.u,p:f.p,pm:f.pm||null,label:roleLabel(r)};
+  });
 }
 function pronAccepted(role){
   let arr=[PRON_BY_ROLE[role].u];
@@ -763,6 +1124,124 @@ function pronAccepted(role){
     if(role==='3fp') arr.push(PRON_BY_ROLE['3mp'].u);
   }
   return arr;
+}
+function effNikudCheck(){
+  const v=(settings&&settings.nikudCheck)||'auto';
+  if(v==='auto') return (settings&&settings.nikud==='always')?'smart':'off';
+  return v;
+}
+function effectiveNikudMode(minMode){
+  const eff=effNikudCheck();
+  if(!minMode) return eff;
+  const rank={off:0,smart:1,full:2};
+  return (rank[minMode]||0)>rank[eff]?minMode:eff;
+}
+function parseClusters(s){
+  if(!s) return [];
+  const finalMap={'ך':'כ','ם':'מ','ן':'נ','ף':'פ','ץ':'צ'};
+  const arr=[];
+  for(const ch of String(s)){
+    const cp=ch.codePointAt(0);
+    if(cp===0x20||cp===0x09||cp===0x0A||cp===0x0D) continue;
+    if(cp>=0x0591&&cp<=0x05AF) continue;
+    if(cp===0x05BD||cp===0x05BF||cp===0x05C1||cp===0x05C2) continue;
+    if(cp===0x05BE||cp===0x05C0||(cp>=0x05C3&&cp<=0x05C6)) continue;
+    if(cp>=0x05B0&&cp<=0x05BB){
+      if(arr.length){
+        let mark=cp;
+        if(cp===0x05BA) mark=0x05B9;
+        arr[arr.length-1].m.add(mark);
+      }
+      continue;
+    }
+    if(cp===0x05BC){
+      if(arr.length&&arr[arr.length-1].c==='ו') arr[arr.length-1].m.add(0x05BC);
+      continue;
+    }
+    if(cp===0x05C7){
+      if(arr.length) arr[arr.length-1].m.add(0x05B8);
+      continue;
+    }
+    if(cp>=0x05D0&&cp<=0x05EA){
+      const base=finalMap[ch]||ch;
+      arr.push({c:base,m:new Set()});
+      continue;
+    }
+  }
+  const out=[];
+  for(let i=0;i<arr.length;i++){
+    if(arr[i].c==='י'&&arr[i].m.size===0&&i+1<arr.length&&arr[i+1].c==='י'&&arr[i+1].m.size===0){
+      out.push({c:'י',m:new Set()});i++;
+    }else{
+      out.push(arr[i]);
+    }
+  }
+  return out;
+}
+function skeletonOf(clusters){return clusters.map(function(c){return c.c;}).join('');}
+function setsEqual(a,b){
+  if(a.size!==b.size) return false;
+  let ok=true;
+  a.forEach(function(x){if(!b.has(x))ok=false;});
+  return ok;
+}
+function consistent(T,P){
+  if(T.length!==P.length) return false;
+  for(let i=0;i<T.length;i++){
+    if(T[i].c!==P[i].c) return false;
+    if(T[i].m.size>0&&!setsEqual(T[i].m,P[i].m)) return false;
+  }
+  return true;
+}
+function exact(T,P){
+  if(T.length!==P.length) return false;
+  for(let i=0;i<T.length;i++){
+    if(T[i].c!==P[i].c) return false;
+    if(!setsEqual(T[i].m,P[i].m)) return false;
+  }
+  return true;
+}
+function checkTyped(poolForms,accForms,input,minMode){
+  const mode=effectiveNikudMode(minMode);
+  if(mode==='off'){
+    const n=N(input);
+    const ok=accForms.some(function(f){return N(f.u)===n||(f.p&&N(f.p)===n)||(f.pm&&N(f.pm)===n);});
+    return {status:ok?'correct':'wrong',reason:ok?'':'consonants',readings:[]};
+  }
+  const T=parseClusters(input);
+  if(!T.length) return {status:'wrong',reason:'consonants',readings:[]};
+  const skel=skeletonOf(T);
+  const targetVariants=[];
+  accForms.forEach(function(f){
+    if(f.p) targetVariants.push({form:f,text:f.p,clusters:parseClusters(f.p)});
+    if(f.pm) targetVariants.push({form:f,text:f.pm,clusters:parseClusters(f.pm)});
+  });
+  const matchingVariants=targetVariants.filter(function(v){return skeletonOf(v.clusters)===skel;});
+  if(!matchingVariants.length) return {status:'wrong',reason:'consonants',readings:[]};
+  const hasMarks=T.some(function(c){return c.m.size>0;});
+  if(mode==='full'){
+    if(!hasMarks) return {status:'wrong',reason:'needNikud',readings:[]};
+    const ok=matchingVariants.some(function(v){return exact(T,v.clusters);});
+    if(ok) return {status:'correct',reason:'',readings:[]};
+    return {status:'wrong',reason:'nikud',readings:[]};
+  }
+  const targetOk=matchingVariants.some(function(v){return consistent(T,v.clusters);});
+  if(!targetOk) return {status:'wrong',reason:hasMarks?'nikud':'consonants',readings:[]};
+  const competitorMatches=[];
+  (poolForms||[]).forEach(function(f){
+    const variants=[];
+    if(f.p) variants.push({text:f.p,clusters:parseClusters(f.p)});
+    if(f.pm) variants.push({text:f.pm,clusters:parseClusters(f.pm)});
+    const hit=variants.find(function(v){return skeletonOf(v.clusters)===skel&&consistent(T,v.clusters);});
+    if(hit) competitorMatches.push({form:f,text:hit.text});
+  });
+  if(competitorMatches.length){
+    const readings=[];
+    matchingVariants.forEach(function(v){readings.push({text:v.text,label:v.form.label||''});});
+    competitorMatches.forEach(function(c){readings.push({text:c.text,label:c.form.label||''});});
+    return {status:'ambiguous',reason:'',readings:readings};
+  }
+  return {status:'correct',reason:'',readings:[]};
 }
 
 function getStat(key){
@@ -915,19 +1394,33 @@ function prepIcon(id){
   };
   return '<svg class="prep-svg" width="48" height="48" '+common+'>'+map[id]+'</svg>';
 }
-function heFormHTML(prepId,role,nikud){
+function heFormHTML(prepId,role,nikud,context){
   const p=PREPS[prepId];
   const f=FORMS[prepId][role];
   const cls=personClass(role);
+  const roleNum=ROLE_META[role].p;
+  const ctx=context||'ref';
+  const plain=ctx==='practice'&&settings&&settings.endColors===false;
+  if(plain){
+    if(p.irregularRoles.indexOf(role)>=0){
+      return '<span class="he end-plain" data-endrole="'+roleNum+'" lang="he" dir="rtl">'+(nikud?f.p:f.u)+'</span><span class="irreg-mark" title="нерегулярная форма">•</span>';
+    }
+    if(nikud){
+      const sp=splitNikud(prepId,role);
+      return '<span class="he" lang="he" dir="rtl"><span class="stem">'+sp.stemP+'</span><span class="end-plain" data-endrole="'+roleNum+'">'+sp.endP+'</span></span>';
+    }
+    const parts=formParts(prepId,role);
+    return '<span class="he" lang="he" dir="rtl"><span class="stem">'+parts.stem+'</span><span class="end-plain" data-endrole="'+roleNum+'">'+parts.end+'</span></span>';
+  }
   if(p.irregularRoles.indexOf(role)>=0){
-    return '<span class="he '+cls+'" lang="he" dir="rtl">'+(nikud?f.p:f.u)+'</span><span class="irreg-mark" title="нерегулярная форма">•</span>';
+    return '<span class="he he-end '+cls+'" data-endrole="'+roleNum+'" lang="he" dir="rtl">'+(nikud?f.p:f.u)+'</span><span class="irreg-mark" title="нерегулярная форма">•</span>';
   }
   if(nikud){
     const sp=splitNikud(prepId,role);
-    return '<span class="he" lang="he" dir="rtl"><span class="stem">'+sp.stemP+'</span><span class="'+cls+'">'+sp.endP+'</span></span>';
+    return '<span class="he" lang="he" dir="rtl"><span class="stem">'+sp.stemP+'</span><span class="he-end '+cls+'" data-endrole="'+roleNum+'">'+sp.endP+'</span></span>';
   }
   const parts=formParts(prepId,role);
-  return '<span class="he" lang="he" dir="rtl"><span class="stem">'+parts.stem+'</span><span class="'+cls+'">'+parts.end+'</span></span>';
+  return '<span class="he" lang="he" dir="rtl"><span class="stem">'+parts.stem+'</span><span class="he-end '+cls+'" data-endrole="'+roleNum+'">'+parts.end+'</span></span>';
 }
 function frameBlankHTML(he){
   const parts=he.split('___');
@@ -951,6 +1444,68 @@ function applyTheme(theme,persist){
   updateThemeButton();
 }
 function toggleTheme(){applyTheme(currentTheme==='dark'?'light':'dark',true);}
+function escHtml(s){return String(s).replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>');}
+function endColorsText(){return '🎨 '+t('endColorsLabel')+': '+(settings.endColors?t('endColorsOn'):t('endColorsOff'));}
+function applyEndColorsSetting(){
+  const on=!!(settings&&settings.endColors);
+  document.body.classList.toggle('end-colors-off',!on);
+  if(on){
+    document.querySelectorAll('.end-plain[data-endrole]').forEach(function(el){
+      el.classList.remove('end-plain');
+      el.classList.add('he-end','role-'+el.getAttribute('data-endrole'));
+    });
+  }
+  document.querySelectorAll('[data-endcolors-chip]').forEach(function(b){
+    b.classList.toggle('active',on);
+    b.setAttribute('aria-pressed',on?'true':'false');
+    b.textContent=endColorsText();
+  });
+  const cb=document.getElementById('set-endcolors');
+  if(cb) cb.checked=on;
+}
+function toggleEndColors(){settings.endColors=!settings.endColors;saveSettings();applyEndColorsSetting();}
+function nikudEffectiveLabel(){
+  const eff=effNikudCheck();
+  if(settings.nikudCheck==='auto') return t('nikudCheckAuto')+' → '+(eff==='smart'?t('nikudCheckSmart'):eff==='full'?t('nikudCheckFull'):t('nikudCheckOff'));
+  if(eff==='smart') return t('nikudCheckSmart');
+  if(eff==='full') return t('nikudCheckFull');
+  return t('nikudCheckOff');
+}
+function nikudChipText(){return 'ָ '+t('nikudCheckLabel')+': '+nikudEffectiveLabel();}
+function applyNikudCheckSetting(){
+  document.querySelectorAll('[data-nikudchip]').forEach(function(b){
+    b.textContent=nikudChipText();
+    b.classList.toggle('active',effNikudCheck()!=='off');
+    b.setAttribute('aria-pressed',effNikudCheck()!=='off'?'true':'false');
+  });
+  const sel=document.getElementById('set-nikudcheck');
+  if(sel) sel.value=settings.nikudCheck;
+  buildNikudRow();
+  syncKeyboard();
+}
+function cycleNikudCheck(){
+  const vals=['auto','off','smart','full'];
+  const i=vals.indexOf(settings.nikudCheck);
+  settings.nikudCheck=vals[(i+1)%vals.length];
+  saveSettings();applyNikudCheckSetting();
+}
+function practiceTogglesHTML(showEndColors){
+  let html='<div class="practice-toggles">';
+  if(showEndColors) html+='<button class="toggle-chip'+(settings.endColors?' active':'')+'" type="button" data-endcolors-chip="1" aria-pressed="'+(settings.endColors?'true':'false')+'">'+endColorsText()+'</button>';
+  html+='<button class="toggle-chip'+(effNikudCheck()!=='off'?' active':'')+'" type="button" data-nikudchip="1" aria-pressed="'+(effNikudCheck()!=='off'?'true':'false')+'">'+nikudChipText()+'</button>';
+  html+='</div><div class="toggle-note">'+t('nikudCheckAutoNote')+'</div>';
+  return html;
+}
+function showNikudNotice(res){
+  const box=document.getElementById('nikud-notice');
+  if(!box) return;
+  const readings=(res.readings||[]).map(function(r){
+    return '<span class="he" lang="he" dir="rtl">'+escHtml(r.text)+'</span>'+(r.label?' <span class="nikud-role">('+escHtml(r.label)+')</span>':'');
+  }).join(' · ');
+  box.innerHTML='<div class="nikud-notice-title">'+t('nikudNoticeTitle')+'</div><div class="nikud-readings">'+readings+'</div><div class="nikud-notice-hint">'+t('addNikud')+'</div>';
+  box.style.display='block';
+}
+function hideNikudNotice(){const box=document.getElementById('nikud-notice');if(box){box.style.display='none';box.innerHTML='';}}
 function updateFlags(){
   document.querySelectorAll('.flag-btn').forEach(function(b){
     const active=b.dataset.lang===currentLang;
@@ -972,6 +1527,8 @@ function applyLanguage(){
   if(setBtn) setBtn.setAttribute('aria-label',t('settingsTitle'));
   phraseAnswered=false;phraseHintShown=false;
   renderCurrent();
+  applyEndColorsSetting();
+  applyNikudCheckSetting();
 }
 function setLang(code){
   if(currentLang===code) return;
@@ -990,6 +1547,8 @@ function renderCurrent(){
   if(currentTab==='map') renderMap();
   else if(currentTab==='path') renderPath();
   else if(currentTab==='train') renderTrain();
+  else if(currentTab==='phrases') renderPhrases();
+  else if(currentTab==='prefix') renderPrefix();
   else renderPhrases();
 }
 
@@ -1095,7 +1654,7 @@ function openHeat(prepId,role){
   }
   const html='<div class="modal-title">'+roleLabel(role)+' · <span class="he" lang="he">'+PREPS[prepId].he+'</span></div>'+
     '<div class="modal-form">'+heFormHTML(prepId,role,true)+'</div>'+
-    '<div class="modal-translit">'+translitOf(f)+'</div>'+
+    trDiv(f,'modal-translit')+
     '<div class="modal-gloss">'+glossOf(prepId,role)+'</div>'+
     '<div style="text-align:center;">'+speakBtn(f.u)+'</div>'+
     '<div class="modal-stats">'+
@@ -1250,8 +1809,10 @@ function stopTimers(){
   if(advanceTimer){clearTimeout(advanceTimer);advanceTimer=null;}
   if(runState&&runState.interval){clearInterval(runState.interval);runState.interval=null;}
   if(speedState&&speedState.interval){clearInterval(speedState.interval);speedState.interval=null;}
+  if(pfxSpeedState&&pfxSpeedState.interval){clearInterval(pfxSpeedState.interval);pfxSpeedState.interval=null;}
   if(runState) runState.running=false;
   if(speedState) speedState.running=false;
+  if(pfxSpeedState) pfxSpeedState.running=false;
 }
 function scheduleNext(delay){
   if(advanceTimer) clearTimeout(advanceTimer);
@@ -1278,7 +1839,7 @@ function updateTrainStats(){
 function renderTrain(){
   const scr=document.getElementById('screen-train');
   if(!scr) return;
-  scr.innerHTML='<div class="train-stats" id="train-stats"></div><div class="filter-wrap" id="train-filters"></div><div class="mode-pills" id="mode-pills"></div><div id="train-area"></div>';
+  scr.innerHTML='<div class="train-stats" id="train-stats"></div>'+practiceTogglesHTML(true)+'<div class="filter-wrap" id="train-filters"></div><div class="mode-pills" id="mode-pills"></div><div id="train-area"></div>';
   renderFilters();
   renderModePills();
   currentQ=null;keyMiniQ=null;
@@ -1370,7 +1931,10 @@ function emptyTrainHTML(){return '<div class="empty-train">'+t('weakEmpty')+'</d
 function hintHTML(q){
   const f=FORMS[q.prep][q.role];
   let html='<div class="hint-gloss">'+glossOf(q.prep,q.role)+'</div>';
-  if(settings.nikud==='hint') html+='<div class="hint-form">'+heFormHTML(q.prep,q.role,true)+' <span class="hint-translit">'+translitOf(f)+'</span></div>';
+  if(settings.nikud==='hint'){
+    const tr=trText(f);
+    html+='<div class="hint-form">'+heFormHTML(q.prep,q.role,true,'practice')+(tr?' <span class="hint-translit">'+tr+'</span>':'')+'</div>';
+  }
   return html;
 }
 function colloquialNote(prepId,role){
@@ -1380,14 +1944,15 @@ function colloquialNote(prepId,role){
   if(role==='3fp') sub='3mp';
   if(!sub) return '';
   const f=FORMS[prepId][sub];
-  return '<div class="colloq-note">'+t('colloqAlso')+' '+heFormHTML(prepId,sub,true)+' ('+translitOf(f)+')</div>';
+  const tr=trText(f);
+  return '<div class="colloq-note">'+t('colloqAlso')+' '+heFormHTML(prepId,sub,true,'practice')+(tr?' ('+tr+')':'')+'</div>';
 }
 function resultHTML(q,correct,extra){
   const f=FORMS[q.prep][q.role];
   let html='<div class="result-box '+(correct?'ok':'bad')+'">';
   html+='<div class="result-title">'+(correct?'✅ '+t('correct'):'❌ '+t('wrong'))+'</div>';
-  html+='<div class="result-he">'+heFormHTML(q.prep,q.role,true)+'</div>';
-  html+='<div class="result-translit">'+translitOf(f)+'</div>';
+  html+='<div class="result-he">'+heFormHTML(q.prep,q.role,true,'practice')+'</div>';
+  html+=trDiv(f,'result-translit');
   html+='<div class="result-gloss">'+glossOf(q.prep,q.role)+'</div>';
   html+=speakBtn(f.u);
   html+=colloquialNote(q.prep,q.role);
@@ -1413,6 +1978,7 @@ function renderRole2Form(){
   let html='<div class="train-card">'+promptHeaderHTML(q);
   html+='<div id="hint-box" style="display:none;"></div>';
   html+='<input class="he-input" id="he-input" lang="he" dir="rtl" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="…">';
+  html+='<div class="nikud-notice" id="nikud-notice"></div>';
   html+='<div class="action-row"><button class="btn-secondary" id="btn-hint" type="button">💡 '+t('hint')+'</button><button class="btn-primary" id="btn-check" type="button">'+t('check')+'</button></div>';
   html+='<div class="action-row"><button class="btn-ghost" id="btn-show" type="button">'+t('show')+'</button></div>';
   html+='<div id="result-box"></div></div>';
@@ -1432,26 +1998,41 @@ function renderRole2Form(){
 function onTypingInput(){
   if(answered||!currentQ||!activeInput) return;
   const val=activeInput.value;
-  if(!val) return;
-  if(acceptedNorm(currentQ.prep,currentQ.role).indexOf(N(val))>=0) checkRole2Form(false);
+  if(!val){hideNikudNotice();return;}
+  const acc=acceptedForms(currentQ.prep,currentQ.role);
+  const pool=prepPoolForms(currentQ.prep,currentQ.role);
+  const res=checkTyped(pool,acc,val,null);
+  if(res.status==='correct'){hideNikudNotice();checkRole2Form(false);}
+  else if(res.status==='ambiguous'){showNikudNotice(res);}
+  else{hideNikudNotice();}
 }
 function checkRole2Form(showAnswer){
   if(answered||!currentQ) return;
-  answered=true;
   const q=currentQ;
   const input=document.getElementById('he-input');
   const val=input?input.value:'';
-  const correct=!showAnswer&&acceptedNorm(q.prep,q.role).indexOf(N(val))>=0;
+  const acc=acceptedForms(q.prep,q.role);
+  const pool=prepPoolForms(q.prep,q.role);
+  const res=showAnswer?{status:'wrong',reason:'',readings:[]}:checkTyped(pool,acc,val,null);
+  if(res.status==='ambiguous'){showNikudNotice(res);return;}
+  answered=true;
+  const correct=res.status==='correct';
   const elapsed=performance.now()-qStart;
   recordAnswer(q.key,correct,elapsed,val,'type');
   if(!correct) noteWrong(q.key);
   if(input){input.readOnly=true;input.classList.toggle('shake',!correct);}
   const check=document.getElementById('btn-check');
   if(check) check.disabled=true;
-  const res=document.getElementById('result-box');
-  if(res){
-    const extra=!correct?'<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(q.prep,q.role,true)+'</div>':'';
-    res.innerHTML=resultHTML(q,correct,extra);
+  const resBox=document.getElementById('result-box');
+  if(resBox){
+    let extra='';
+    if(!correct){
+      extra='<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(q.prep,q.role,true,'practice')+'</div>';
+      if(val) extra+='<div class="result-wrong-note">'+t('youTyped')+' <span class="he" lang="he" dir="rtl">'+escHtml(val)+'</span></div>';
+      if(res.reason==='nikud') extra+='<div class="colloq-note">'+t('nikudWrong')+'</div>';
+      if(res.reason==='needNikud') extra+='<div class="colloq-note">'+t('nikudNeed')+'</div>';
+    }
+    resBox.innerHTML=resultHTML(q,correct,extra);
   }
   scheduleNext(correct?1100:2400);
 }
@@ -1464,10 +2045,10 @@ function renderForm2Role(){
   answered=false;hintShown=false;qStart=performance.now();
   const f=FORMS[q.prep][q.role];
   const nikud=settings.nikud==='always';
-  const matching=matchingRoles(q.prep,f.u);
+  const matching=(nikud&&effNikudCheck()!=='off')?matchingRolesExact(q.prep,f.p):matchingRoles(q.prep,f.u);
   let html='<div class="train-card">';
   html+='<div class="prompt-row"><div class="prompt-prep">'+prepIcon(q.prep)+'<div class="prep-name he" lang="he" dir="rtl">'+PREPS[q.prep].he+'</div><div class="prompt-sub">'+prepMeaning(PREPS[q.prep])+'</div></div></div>';
-  html+='<div style="text-align:center;margin:4px 0 10px;"><div class="result-he" id="f2r-form">'+heFormHTML(q.prep,q.role,nikud)+'</div><div class="result-translit">'+translitOf(f)+'</div><div style="text-align:center;">'+speakBtn(f.u)+'</div></div>';
+  html+='<div style="text-align:center;margin:4px 0 10px;"><div class="result-he" id="f2r-form">'+heFormHTML(q.prep,q.role,nikud,'practice')+'</div><div style="text-align:center;">'+speakBtn(f.u)+'</div></div>';
   html+='<div id="hint-box" style="display:none;"></div>';
   html+='<div class="section-intro" style="text-align:center;">'+t('roleQuestion')+'</div><div class="answer-grid" id="f2r-grid">';
   ROLE_IDS.forEach(function(role){
@@ -1493,7 +2074,7 @@ function renderForm2Role(){
         b.disabled=true;
       });
       const form=document.getElementById('f2r-form');
-      if(form) form.innerHTML=heFormHTML(q.prep,q.role,true);
+      if(form) form.innerHTML=heFormHTML(q.prep,q.role,true,'practice');
       let extra='';
       if(correct&&matching.length>1){
         extra='<div class="colloq-note">'+t('bothCorrect')+' '+matching.map(roleLabel).join(', ')+'</div>';
@@ -1511,7 +2092,7 @@ function renderForm2Role(){
   const hb=document.getElementById('btn-f2r-hint');
   if(hb) hb.addEventListener('click',function(){
     const form=document.getElementById('f2r-form');
-    if(form) form.innerHTML=heFormHTML(q.prep,q.role,true);
+    if(form) form.innerHTML=heFormHTML(q.prep,q.role,true,'practice');
     const box=document.getElementById('hint-box');
     if(box){box.style.display='block';box.className='hint-box';box.innerHTML=hintHTML(q);}
   });
@@ -1583,7 +2164,7 @@ function renderBuild(){
   function updateAsm(){
     if(selStem!==null){asmStem.textContent=selStem;asmStem.classList.remove('asm-placeholder');}
     else{asmStem.textContent='?';asmStem.classList.add('asm-placeholder');}
-    if(selEnd!==null){asmEnd.textContent=selEnd;asmEnd.classList.remove('asm-placeholder');asmEnd.className='asm-slot '+personClass(q.role);}
+    if(selEnd!==null){asmEnd.textContent=selEnd;asmEnd.classList.remove('asm-placeholder');asmEnd.setAttribute('data-endrole',ROLE_META[q.role].p);asmEnd.className='asm-slot '+((settings.endColors)?'he-end '+personClass(q.role):'end-plain');}
     else{asmEnd.textContent='?';asmEnd.className='asm-slot asm-placeholder';}
     check.disabled=!(selStem!==null&&selEnd!==null);
   }
@@ -1612,7 +2193,7 @@ function renderBuild(){
     if(!correct) noteWrong(q.key);
     check.disabled=true;
     const res=document.getElementById('result-box');
-    const extra=!correct?'<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(q.prep,q.role,true)+'</div>':'';
+    const extra=!correct?'<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(q.prep,q.role,true,'practice')+'</div>':'';
     if(res) res.innerHTML=resultHTML(q,correct,extra);
     scheduleNext(correct?1100:2400);
   });
@@ -1641,7 +2222,7 @@ function renderBuildWhole(q){
         b.disabled=true;
       });
       const res=document.getElementById('result-box');
-      const extra=!correct?'<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(q.prep,q.role,true)+'</div>':'';
+      const extra=!correct?'<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(q.prep,q.role,true,'practice')+'</div>':'';
       if(res) res.innerHTML=resultHTML(q,correct,extra);
       scheduleNext(correct?1100:2400);
     });
@@ -1721,6 +2302,7 @@ function renderPerspective(){
   html+='<div class="target-badge">'+t('targetIs')+' <b>'+taName+'</b></div>';
   html+='<div id="hint-box" style="display:none;"></div>';
   html+='<input class="he-input" id="he-input" lang="he" dir="rtl" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="…">';
+  html+='<div class="nikud-notice" id="nikud-notice"></div>';
   html+='<div class="action-row"><button class="btn-secondary" id="btn-hint" type="button">💡 '+t('hint')+'</button><button class="btn-primary" id="btn-check" type="button">'+t('check')+'</button></div>';
   html+='<div class="action-row"><button class="btn-ghost" id="btn-show" type="button">'+t('show')+'</button></div>';
   html+='<div id="result-box"></div></div>';
@@ -1741,19 +2323,26 @@ function renderPerspective(){
 }
 function checkPerspective(showAnswer){
   if(answered||!currentQ) return;
-  answered=true;
   const q=currentQ;
   const input=document.getElementById('he-input');
   const val=input?input.value:'';
-  const correct=!showAnswer&&acceptedNorm(q.prep,q.role).indexOf(N(val))>=0;
+  const acc=acceptedForms(q.prep,q.role);
+  const pool=prepPoolForms(q.prep,q.role);
+  const res=showAnswer?{status:'wrong',reason:'',readings:[]}:checkTyped(pool,acc,val,null);
+  if(res.status==='ambiguous'){showNikudNotice(res);return;}
+  answered=true;
+  const correct=res.status==='correct';
   const elapsed=performance.now()-qStart;
   recordAnswer(q.key,correct,elapsed,val,'type');
   if(!correct) noteWrong(q.key);
   if(input){input.readOnly=true;input.classList.toggle('shake',!correct);}
   const check=document.getElementById('btn-check');if(check)check.disabled=true;
-  const res=document.getElementById('result-box');
-  const extra=!correct?'<div class="result-wrong-note">'+t('answerWas')+' '+roleLabel(q.role)+' · '+heFormHTML(q.prep,q.role,true)+'</div>':'<div class="colloq-note">'+roleLabel(q.role)+'</div>';
-  if(res) res.innerHTML=resultHTML(q,correct,extra);
+  const resBox=document.getElementById('result-box');
+  let extra=correct?'<div class="colloq-note">'+roleLabel(q.role)+'</div>':'<div class="result-wrong-note">'+t('answerWas')+' '+roleLabel(q.role)+' · '+heFormHTML(q.prep,q.role,true,'practice')+'</div>';
+  if(!correct&&val) extra+='<div class="result-wrong-note">'+t('youTyped')+' <span class="he" lang="he" dir="rtl">'+escHtml(val)+'</span></div>';
+  if(!correct&&res.reason==='nikud') extra+='<div class="colloq-note">'+t('nikudWrong')+'</div>';
+  if(!correct&&res.reason==='needNikud') extra+='<div class="colloq-note">'+t('nikudNeed')+'</div>';
+  if(resBox) resBox.innerHTML=resultHTML(q,correct,extra);
   scheduleNext(correct?1100:2400);
 }
 
@@ -1790,6 +2379,7 @@ function renderRun(){
   html+='<div class="frame-box he" lang="he" dir="rtl">'+frameBlankHTML(fr.he)+'</div><div class="frame-gloss">'+(currentLang==='en'?fr.en:fr.ru)+'</div>';
   html+='<div class="prompt-role '+personClass(role)+'" style="margin-bottom:8px;">'+roleIcon(role,40)+'<div class="role-label">'+roleLabel(role)+'</div></div>';
   html+='<input class="he-input" id="he-input" lang="he" dir="rtl" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="…">';
+  html+='<div class="nikud-notice" id="nikud-notice"></div>';
   html+='<div class="action-row"><button class="btn-primary" id="btn-check" type="button">'+t('check')+'</button></div>';
   html+='<div id="result-box"></div></div>';
   area.innerHTML=html;
@@ -1817,20 +2407,27 @@ function startRun(){
 }
 function checkRunAnswer(showAnswer){
   if(answered||!runState||!runState.running) return;
-  answered=true;
   const role=runState.roles[runState.idx];
   const fr=FRAMES_BY_ID[runState.frameId];
   const q={type:'frame',frame:runState.frameId,prep:fr.prep,role:role,key:'frame:'+runState.frameId+':'+role};
   const input=document.getElementById('he-input');
   const val=input?input.value:'';
-  const correct=!showAnswer&&acceptedNorm(q.prep,q.role).indexOf(N(val))>=0;
+  const acc=acceptedForms(q.prep,q.role);
+  const pool=prepPoolForms(q.prep,q.role);
+  const res=showAnswer?{status:'wrong',reason:'',readings:[]}:checkTyped(pool,acc,val,null);
+  if(res.status==='ambiguous'){showNikudNotice(res);return;}
+  answered=true;
+  const correct=res.status==='correct';
   const elapsed=performance.now()-qStart;
   recordAnswer(q.key,correct,elapsed,val,'type');
   if(!correct){runState.errors++;noteWrong(q.key);}
   if(input) input.readOnly=true;
-  const res=document.getElementById('result-box');
-  const extra=!correct?'<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(q.prep,q.role,true)+'</div>':'';
-  if(res) res.innerHTML=resultHTML(q,correct,extra);
+  const resBox=document.getElementById('result-box');
+  let extra=!correct?'<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(q.prep,q.role,true,'practice')+'</div>':'';
+  if(!correct&&val) extra+='<div class="result-wrong-note">'+t('youTyped')+' <span class="he" lang="he" dir="rtl">'+escHtml(val)+'</span></div>';
+  if(!correct&&res.reason==='nikud') extra+='<div class="colloq-note">'+t('nikudWrong')+'</div>';
+  if(!correct&&res.reason==='needNikud') extra+='<div class="colloq-note">'+t('nikudNeed')+'</div>';
+  if(resBox) resBox.innerHTML=resultHTML(q,correct,extra);
   runState.idx++;
   advanceTimer=setTimeout(function(){
     advanceTimer=null;
@@ -2143,7 +2740,7 @@ function renderPhrases(){
   if(!phraseAnswered) s._start=performance.now();
   const f=FORMS[s.prep][s.role];
   const parts=s.he.split('___');
-  let html='<div class="section-title">'+t('phrasesTitle')+'</div>';
+  let html='<div class="section-title">'+t('phrasesTitle')+'</div>'+practiceTogglesHTML(true);
   html+='<div class="subtabs" style="margin-bottom:12px;"><div class="subtab '+(currentPhraseMode==='choice'?'active':'')+'" data-pmode="choice">'+t('phraseModeChoice')+'</div><div class="subtab '+(currentPhraseMode==='type'?'active':'')+'" data-pmode="type">'+t('phraseModeType')+'</div></div>';
   html+='<div class="phrase-card">';
   html+='<div class="phrase-role '+personClass(s.role)+'">'+roleIcon(s.role,30)+'<span>'+roleLabel(s.role)+'</span><span style="color:var(--muted);font-weight:600;">·</span><span class="he" lang="he" dir="rtl">'+PREPS[s.prep].he+'</span></div>';
@@ -2157,6 +2754,7 @@ function renderPhrases(){
     html+='</div>';
   }else{
     html+='<input class="he-input" id="phrase-input" lang="he" dir="rtl" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="…">';
+    html+='<div class="nikud-notice" id="nikud-notice"></div>';
     html+='<div class="action-row"><button class="btn-primary" id="phrase-check" type="button">'+t('check')+'</button></div>';
   }
   html+='<div id="phrase-result"></div>';
@@ -2174,7 +2772,8 @@ function renderPhrases(){
   document.getElementById('phrase-hint').addEventListener('click',function(){
     phraseHintShown=true;
     hintBox.style.display='block';hintBox.className='hint-box';
-    hintBox.innerHTML='<div class="hint-gloss">'+(currentLang==='en'?s.en:s.ru)+'</div>'+(settings.nikud==='hint'?'<div class="hint-form">'+heFormHTML(s.prep,s.role,true)+' <span class="hint-translit">'+translitOf(f)+'</span></div>':'');
+    const tr=trText(f);
+    hintBox.innerHTML='<div class="hint-gloss">'+(currentLang==='en'?s.en:s.ru)+'</div>'+(settings.nikud==='hint'?'<div class="hint-form">'+heFormHTML(s.prep,s.role,true,'practice')+(tr?' <span class="hint-translit">'+tr+'</span>':'')+'</div>':'');
   });
   const readBtn=document.getElementById('phrase-read');
   if(readBtn) readBtn.addEventListener('click',function(){speakHebrew(s.he.replace('___',f.u));});
@@ -2195,21 +2794,24 @@ function renderPhrases(){
   }else{
     const input=document.getElementById('phrase-input');
     activeInput=input;
-    document.getElementById('phrase-check').addEventListener('click',function(){
+    const acc=acceptedForms(s.prep,s.role);
+    const pool=prepPoolForms(s.prep,s.role);
+    function doPhraseCheck(){
       if(phraseAnswered) return;
+      const res=checkTyped(pool,acc,input.value,null);
+      if(res.status==='ambiguous'){showNikudNotice(res);return;}
       phraseAnswered=true;
-      const correct=acceptedNorm(s.prep,s.role).indexOf(N(input.value))>=0;
-      finishPhrase(s,f,correct,input.value);
+      finishPhrase(s,f,res.status==='correct',input.value,res.reason);
       input.readOnly=true;
-    });
-    input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();document.getElementById('phrase-check').click();}});
+    }
+    document.getElementById('phrase-check').addEventListener('click',doPhraseCheck);
+    input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doPhraseCheck();}});
     input.addEventListener('input',function(){
       if(phraseAnswered) return;
-      if(acceptedNorm(s.prep,s.role).indexOf(N(input.value))>=0){
-        phraseAnswered=true;
-        finishPhrase(s,f,true,input.value);
-        input.readOnly=true;
-      }
+      const res=checkTyped(pool,acc,input.value,null);
+      if(res.status==='correct'){phraseAnswered=true;finishPhrase(s,f,true,input.value,'');input.readOnly=true;}
+      else if(res.status==='ambiguous'){showNikudNotice(res);}
+      else{hideNikudNotice();}
     });
   }
   document.getElementById('phrase-next').addEventListener('click',function(){
@@ -2239,7 +2841,7 @@ function phraseOptions(s){
   }
   return shuffle(opts);
 }
-function finishPhrase(s,f,correct,given){
+function finishPhrase(s,f,correct,given,reason){
   const elapsed=performance.now()-(s._start||performance.now());
   recordAnswer(s.prep+':'+s.role,correct,elapsed,given,currentPhraseMode==='choice'?'choice':'type');
   if(!correct) noteWrong(s.prep+':'+s.role);
@@ -2247,11 +2849,16 @@ function finishPhrase(s,f,correct,given){
   if(blank) blank.textContent=f.u;
   const res=document.getElementById('phrase-result');
   let html='<div class="result-box '+(correct?'ok':'bad')+'"><div class="result-title">'+(correct?'✅ '+t('correct'):'❌ '+t('wrong'))+'</div>';
-  html+='<div class="result-he">'+heFormHTML(s.prep,s.role,true)+'</div><div class="result-translit">'+translitOf(f)+'</div><div class="result-gloss">'+glossOf(s.prep,s.role)+'</div>';
-  if(!correct) html+='<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(s.prep,s.role,true)+'</div>';
+  html+='<div class="result-he">'+heFormHTML(s.prep,s.role,true,'practice')+'</div>'+trDiv(f,'result-translit')+'<div class="result-gloss">'+glossOf(s.prep,s.role)+'</div>';
+  if(!correct){
+    html+='<div class="result-wrong-note">'+t('answerWas')+' '+heFormHTML(s.prep,s.role,true,'practice')+'</div>';
+    if(given) html+='<div class="result-wrong-note">'+t('youTyped')+' <span class="he" lang="he" dir="rtl">'+escHtml(given)+'</span></div>';
+    if(reason==='nikud') html+='<div class="colloq-note">'+t('nikudWrong')+'</div>';
+    if(reason==='needNikud') html+='<div class="colloq-note">'+t('nikudNeed')+'</div>';
+  }
   if(settings.register==='colloquial'&&(s.role==='2fp'||s.role==='3fp')){
     const sub=s.role==='2fp'?'2mp':'3mp';
-    html+='<div class="colloq-note">'+t('colloqAlso')+' '+heFormHTML(s.prep,sub,true)+'</div>';
+    html+='<div class="colloq-note">'+t('colloqAlso')+' '+heFormHTML(s.prep,sub,true,'practice')+'</div>';
   }
   html+=speakBtn(f.u);
   html+='</div>';
@@ -2275,6 +2882,9 @@ function openSettings(){
     '<div class="settings-row"><span class="settings-label">'+t('registerLabel')+'</span><select class="settings-select" id="set-register"><option value="colloquial">'+t('registerColloq')+'</option><option value="strict">'+t('registerStrict')+'</option></select></div>'+
     '<div class="settings-row"><span class="settings-label">'+t('soundLabel')+'</span><input class="settings-check" type="checkbox" id="set-sound"></div>'+
     '<div class="settings-row"><span class="settings-label">'+t('strictPathLabel')+'</span><input class="settings-check" type="checkbox" id="set-strictpath"></div>'+
+    '<div class="settings-row"><span class="settings-label">'+t('endColorsLabel')+'</span><input class="settings-check" type="checkbox" id="set-endcolors"></div>'+
+    '<div class="settings-row"><span class="settings-label">'+t('nikudCheckLabel')+'</span><select class="settings-select" id="set-nikudcheck"><option value="auto">'+t('nikudCheckAuto')+'</option><option value="off">'+t('nikudCheckOff')+'</option><option value="smart">'+t('nikudCheckSmart')+'</option><option value="full">'+t('nikudCheckFull')+'</option></select></div>'+
+    '<div class="toggle-note" style="margin:-4px 0 8px;">'+t('nikudCheckAutoNote')+'</div>'+
     '<div class="settings-actions">'+
       '<button class="btn-secondary" id="set-export" type="button">'+t('exportLabel')+'</button>'+
       '<button class="btn-secondary" id="set-import" type="button">'+t('importLabel')+'</button>'+
@@ -2288,11 +2898,15 @@ function openSettings(){
   document.getElementById('set-register').value=settings.register;
   document.getElementById('set-sound').checked=!!settings.sound;
   document.getElementById('set-strictpath').checked=!!settings.strictPath;
-  nikud.addEventListener('change',function(){settings.nikud=nikud.value;saveSettings();renderCurrent();showToast(t('settingsSaved'));});
+  document.getElementById('set-endcolors').checked=!!settings.endColors;
+  document.getElementById('set-nikudcheck').value=settings.nikudCheck;
+  nikud.addEventListener('change',function(){settings.nikud=nikud.value;saveSettings();applyNikudCheckSetting();renderCurrent();showToast(t('settingsSaved'));});
   document.getElementById('set-translit').addEventListener('change',function(e){settings.translit=e.target.checked;saveSettings();renderCurrent();});
   document.getElementById('set-register').addEventListener('change',function(e){settings.register=e.target.value;saveSettings();currentQ=null;renderCurrent();});
   document.getElementById('set-sound').addEventListener('change',function(e){settings.sound=e.target.checked;saveSettings();});
   document.getElementById('set-strictpath').addEventListener('change',function(e){settings.strictPath=e.target.checked;saveSettings();renderCurrent();});
+  document.getElementById('set-endcolors').addEventListener('change',function(e){settings.endColors=e.target.checked;saveSettings();applyEndColorsSetting();});
+  document.getElementById('set-nikudcheck').addEventListener('change',function(e){settings.nikudCheck=e.target.value;saveSettings();applyNikudCheckSetting();});
   document.getElementById('set-export').addEventListener('click',exportProgress);
   document.getElementById('set-import').addEventListener('click',function(){document.getElementById('set-file').click();});
   document.getElementById('set-file').addEventListener('change',importProgress);
@@ -2321,10 +2935,21 @@ function importProgress(e){
       if(data&&data.stats&&typeof data.stats==='object'){
         stats=data.stats;
         if(data.settings&&typeof data.settings==='object'){
-          settings=Object.assign({nikud:'hint',translit:true,register:'colloquial',sound:true,strictPath:false,score:0,streak:0,bestStreak:0},data.settings);
+          const base={nikud:'hint',translit:true,register:'colloquial',sound:true,strictPath:false,score:0,streak:0,bestStreak:0,endColors:true,nikudCheck:'auto',pfxFilter:{prefixes:[],tags:[],forms:[],weak:false,notAuto:false}};
+          settings=Object.assign(base,data.settings);
+          if(['always','hint','off'].indexOf(settings.nikud)<0) settings.nikud='hint';
+          if(['colloquial','strict'].indexOf(settings.register)<0) settings.register='colloquial';
+          if(typeof settings.endColors!=='boolean') settings.endColors=true;
+          if(['auto','off','smart','full'].indexOf(settings.nikudCheck)<0) settings.nikudCheck='auto';
+          if(!settings.pfxFilter||typeof settings.pfxFilter!=='object') settings.pfxFilter={prefixes:[],tags:[],forms:[],weak:false,notAuto:false};
+          if(!Array.isArray(settings.pfxFilter.prefixes)) settings.pfxFilter.prefixes=[];
+          if(!Array.isArray(settings.pfxFilter.tags)) settings.pfxFilter.tags=[];
+          if(!Array.isArray(settings.pfxFilter.forms)) settings.pfxFilter.forms=[];
+          if(typeof settings.pfxFilter.weak!=='boolean') settings.pfxFilter.weak=false;
+          if(typeof settings.pfxFilter.notAuto!=='boolean') settings.pfxFilter.notAuto=false;
         }
         if(data.best&&typeof data.best==='object') bestTimes=data.best;
-        saveStats();saveSettings();saveBest();updateProgress();renderCurrent();closeModal();
+        saveStats();saveSettings();saveBest();updateProgress();applyEndColorsSetting();applyNikudCheckSetting();renderCurrent();closeModal();
         showToast(t('imported'));
       }else{
         showToast(t('importError'));
@@ -2340,18 +2965,701 @@ function resetProgress(){
   settings.score=0;settings.streak=0;settings.bestStreak=0;
   saveStats();saveBest();saveSettings();
   recentWrong=[];history=[];currentQ=null;keyMiniQ=null;runState=null;speedState=null;
+  pfxQ=null;pfxHistory=[];pfxSpeedState=null;pfxPhraseAnswered=false;
   updateProgress();renderCurrent();closeModal();
   showToast(t('saved'));
 }
 
+const PFX_RULES=[
+  {tag:'plain',ru:'Обычная форма приставки.',en:'Default form of the prefix.'},
+  {tag:'article',ru:'С артиклем ה: ה исчезает, гласная остаётся.',en:'With the article ה: ה disappears, its vowel stays.'},
+  {tag:'sheva',ru:'Перед буквой со шва.',en:'Before a letter with shva.'},
+  {tag:'yod',ru:'Перед י со шва.',en:'Before י with shva.'},
+  {tag:'guttural',ru:'Перед א/ע: מ → מֵ, артикль → הָ.',en:'Before א/ע: מ → מֵ, the article → הָ.'},
+  {tag:'u',ru:'ו → וּ перед ב, מ, פ или шва.',en:'ו → וּ before ב, מ, פ or shva.'}
+];
+function pfxTagLabel(tag){return t('pfxTag'+tag.charAt(0).toUpperCase()+tag.slice(1));}
+function pfxPrefix(id){return PREFIXES.find(function(p){return p.id===id;})||null;}
+function pfxRuleText(tag){
+  const r=PFX_RULES.find(function(x){return x.tag===tag;});
+  return r?(currentLang==='en'?r.en:r.ru):pfxTagLabel(tag);
+}
+function pfxExamplesHTML(tag,count){
+  const items=PFX_ITEMS.filter(function(it){return it.tag===tag;}).slice(0,count||2);
+  if(!items.length) return '';
+  let html='<div class="pfx-examples">';
+  items.forEach(function(it){
+    html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl">'+it.p+'</span><span>'+it.tr+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
+  });
+  html+='</div>';
+  return html;
+}
+function renderPrefix(){
+  const scr=document.getElementById('screen-prefix');
+  if(!scr) return;
+  let html='<div class="subtabs" id="prefix-subtabs">';
+  html+='<div class="subtab '+(currentPrefixSub==='ref'?'active':'')+'" data-psub="ref">'+t('pfxSubRef')+'</div>';
+  html+='<div class="subtab '+(currentPrefixSub==='train'?'active':'')+'" data-psub="train">'+t('pfxSubTrain')+'</div>';
+  html+='<div class="subtab '+(currentPrefixSub==='map'?'active':'')+'" data-psub="map">'+t('pfxSubMap')+'</div>';
+  html+='</div><div id="prefix-body"></div>';
+  scr.innerHTML=html;
+  const body=document.getElementById('prefix-body');
+  if(currentPrefixSub==='ref') body.innerHTML=prefixRefHTML();
+  else if(currentPrefixSub==='train') renderPrefixTrain(body);
+  else body.innerHTML=prefixMapHTML();
+}
+function prefixRefHTML(){
+  let html='<div class="pfx-mnemonic"><div class="pfx-mnemonic-title">'+t('pfxMnemonicTitle')+'</div><div class="pfx-mnemonic-intro">'+t('pfxMnemonicIntro')+'</div><div class="pfx-tiles">';
+  PREFIXES.forEach(function(p){
+    html+='<button class="pfx-tile" type="button" data-pfxletter="'+p.id+'"><span class="pfx-tile-letter he" lang="he" dir="rtl">'+p.id+'</span><span class="pfx-tile-name">'+(currentLang==='en'?p.nameEn:p.nameRu)+'</span></button>';
+  });
+  html+='</div></div>';
+  html+='<div class="section-title">'+t('pfxRulesTitle')+'</div>';
+  ['plain','article','sheva','yod','guttural','u'].forEach(function(tag){
+    html+='<div class="pfx-rule-card"><div class="pfx-rule-title">'+pfxTagLabel(tag)+'</div><div class="pfx-rule-text">'+pfxRuleText(tag)+'</div>'+pfxExamplesHTML(tag,2)+'</div>';
+  });
+  html+='<div class="section-title">'+t('pfxTrapsTitle')+'</div>';
+  PFX_TRAPS.forEach(function(tr){
+    html+='<div class="pfx-trap">'+(currentLang==='en'?tr.en:tr.ru)+'</div>';
+  });
+  return html;
+}
+function openPrefixModal(id){
+  const p=pfxPrefix(id);
+  if(!p) return;
+  let html='<div class="modal-title"><span class="he" lang="he" dir="rtl" style="font-size:30px;">'+p.id+'</span> · '+(currentLang==='en'?p.nameEn:p.nameRu)+'</div>';
+  html+='<div class="pfx-rule-text">'+(currentLang==='en'?p.meaningEn:p.meaningRu)+'</div>';
+  html+='<div class="pfx-examples" style="margin-top:8px;">';
+  p.forms.forEach(function(f){
+    html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl" style="font-size:22px;">'+f.p+'</span><span>'+f.tr+'</span><span>'+(currentLang==='en'?f.ruleEn:f.ruleRu)+'</span>'+speakBtn(f.p)+'</div>';
+  });
+  html+='</div>';
+  const examples=PFX_ITEMS.filter(function(it){return it.prefix===id;}).slice(0,2);
+  if(examples.length){
+    html+='<div class="section-title" style="margin-top:10px;">'+t('pfxExamples')+'</div>';
+    examples.forEach(function(it){
+      html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl">'+it.p+'</span><span>'+it.tr+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
+    });
+  }
+  openModal(html,true);
+}
+function renderPrefixTrain(body){
+  body.innerHTML='<div class="section-title">'+t('pfxTrainTitle')+'</div>'+practiceTogglesHTML(false)+'<div class="filter-wrap" id="pfx-filters"></div><div class="mode-pills" id="pfx-modes"></div><div id="pfx-area"></div>';
+  renderPfxFilters();
+  renderPfxModes();
+  renderPfxArea();
+}
+function renderPfxFilters(){
+  const box=document.getElementById('pfx-filters');
+  if(!box) return;
+  const f=settings.pfxFilter;
+  let html='<div class="filter-row"><span class="filter-label">'+t('pfxFilterPrefixes')+'</span>';
+  PREFIXES.forEach(function(p){
+    html+='<button class="chip'+(f.prefixes.indexOf(p.id)>=0?' active':'')+'" type="button" data-pfxpref="'+p.id+'"><span class="he" lang="he" dir="rtl">'+p.id+'</span></button>';
+  });
+  html+='</div>';
+  html+='<div class="filter-row"><span class="filter-label">'+t('pfxFilterTags')+'</span>';
+  ['plain','article','sheva','yod','guttural','u','combo','pron'].forEach(function(tag){
+    html+='<button class="chip'+(f.tags.indexOf(tag)>=0?' active':'')+'" type="button" data-pfxtag="'+tag+'">'+pfxTagLabel(tag)+'</button>';
+  });
+  html+='</div>';
+  html+='<div class="filter-row"><span class="filter-label">'+t('pfxFilterForms')+'</span>';
+  PREFIXES.forEach(function(p){
+    p.forms.forEach(function(form){
+      if(form.noQuiz) return;
+      html+='<button class="chip'+(f.forms.indexOf(form.p)>=0?' active':'')+'" type="button" data-pfxformfilter="'+escAttr(form.p)+'"><span class="he" lang="he" dir="rtl">'+form.p+'</span></button>';
+    });
+  });
+  html+='</div>';
+  html+='<div class="filter-row"><button class="chip'+(f.weak?' active':'')+'" type="button" data-pfxweak="1">'+t('pfxFilterWeak')+'</button><button class="chip'+(f.notAuto?' active':'')+'" type="button" data-pfxnotauto="1">'+t('pfxFilterNotAuto')+'</button><button class="chip" type="button" data-pfxreset="1">↺ '+t('pfxFilterReset')+'</button></div>';
+  box.innerHTML=html;
+}
+function pfxFilteredItems(){
+  const f=settings.pfxFilter;
+  return PFX_ITEMS.filter(function(it){
+    if(f.prefixes.length&&f.prefixes.indexOf(it.prefix)<0) return false;
+    if(f.tags.length&&f.tags.indexOf(it.tag)<0) return false;
+    if(f.forms.length&&f.forms.indexOf(it.pfxForm)<0) return false;
+    if(f.weak&&isMastered(it.key)) return false;
+    if(f.notAuto&&isAuto(it.key)) return false;
+    return true;
+  });
+}
+function pfxBuildPool(){return pfxFilteredItems();}
+function pfxWordPool(){return pfxFilteredItems().filter(function(it){return it.tag!=='combo'&&it.tag!=='pron';});}
+function pfxLetterPool(){
+  const f=settings.pfxFilter;
+  return PREFIXES.filter(function(p){return !f.prefixes.length||f.prefixes.indexOf(p.id)>=0;});
+}
+const PFX_MODES=[{id:'letter',key:'pfxModeLetter'},{id:'build',key:'pfxModeBuild'},{id:'form',key:'pfxModeForm'},{id:'parse',key:'pfxModeParse'},{id:'speed',key:'pfxModeSpeed'},{id:'phrases',key:'pfxModePhrases'}];
+function renderPfxModes(){
+  const box=document.getElementById('pfx-modes');
+  if(!box) return;
+  let html='';
+  PFX_MODES.forEach(function(m){html+='<button class="mode-pill'+(pfxMode===m.id?' active':'')+'" type="button" data-pfxmode="'+m.id+'">'+t(m.key)+'</button>';});
+  box.innerHTML=html;
+}
+function renderPfxArea(){
+  const area=document.getElementById('pfx-area');
+  if(!area) return;
+  activeInput=null;
+  if(pfxMode==='letter') renderPfxLetter();
+  else if(pfxMode==='build') renderPfxBuild();
+  else if(pfxMode==='form') renderPfxForm();
+  else if(pfxMode==='parse') renderPfxParse();
+  else if(pfxMode==='speed') renderPfxSpeed();
+  else renderPfxPhrases();
+  syncKeyboard();
+}
+function pfxPick(pool){
+  if(!pool||!pool.length) return null;
+  let best=null;
+  for(let attempt=0;attempt<6;attempt++){
+    const cand=weightedPick(pool);
+    const l1=pfxHistory[pfxHistory.length-1],l2=pfxHistory[pfxHistory.length-2];
+    if(l1&&l2&&l1.prefix===cand.prefix&&l2.prefix===cand.prefix) continue;
+    best=cand;break;
+  }
+  if(!best) best=weightedPick(pool);
+  pfxHistory.push(best);
+  if(pfxHistory.length>6) pfxHistory.shift();
+  return best;
+}
+function pfxRecord(key,correct,elapsed,given,mode){recordAnswer(key,correct,elapsed,given,mode);}
+function schedulePfxNext(delay){
+  if(advanceTimer) clearTimeout(advanceTimer);
+  advanceTimer=setTimeout(function(){advanceTimer=null;pfxQ=null;pfxAnswered=false;renderPfxArea();},delay);
+}
+function pfxLetterOptions(id){
+  const all=PREFIXES.filter(function(p){return p.id!==id;});
+  shuffle(all);
+  return shuffle([pfxPrefix(id)].concat(all.slice(0,3)));
+}
+function pfxResultHTML(p,correct){
+  let html='<div class="result-box '+(correct?'ok':'bad')+'"><div class="result-title">'+(correct?'✅ '+t('correct'):'❌ '+t('wrong'))+'</div>';
+  html+='<div class="result-he he" lang="he" dir="rtl">'+p.id+'</div><div class="result-gloss">'+(currentLang==='en'?p.meaningEn:p.meaningRu)+'</div>';
+  html+=speakBtn(p.id);
+  html+='</div>';
+  return html;
+}
+function renderPfxLetter(){
+  const area=document.getElementById('pfx-area');
+  if(!area) return;
+  if(!pfxQ){
+    const pool=pfxLetterPool().map(function(p){return {id:p.id,prefix:p.id,key:'pfxm:'+p.id};});
+    pfxQ=pfxPick(pool);
+  }
+  const q=pfxQ;
+  if(!q){area.innerHTML='<div class="empty-train">'+t('pfxEmpty')+'</div>';return;}
+  pfxAnswered=false;pfxStart=performance.now();
+  const p=pfxPrefix(q.id);
+  const opts=pfxLetterOptions(q.id);
+  let html='<div class="pfx-card"><div class="filter-row" style="justify-content:center;"><button class="chip'+(pfxLetterDir==='letter2meaning'?' active':'')+'" type="button" data-pfxdir="letter2meaning">'+t('pfxLetterQuestion')+'</button><button class="chip'+(pfxLetterDir==='meaning2letter'?' active':'')+'" type="button" data-pfxdir="meaning2letter">'+t('pfxMeaningQuestion')+'</button></div>';
+  html+='<div class="pfx-prompt">'+(pfxLetterDir==='letter2meaning'?t('pfxLetterQuestion'):t('pfxMeaningQuestion'))+'</div>';
+  if(pfxLetterDir==='letter2meaning'){
+    html+='<div class="pfx-letter-big he" lang="he" dir="rtl">'+p.id+'</div><div class="pfx-letter-name">'+(currentLang==='en'?p.nameEn:p.nameRu)+'</div>';
+  }else{
+    html+='<div class="pfx-word-big">'+(currentLang==='en'?p.meaningEn:p.meaningRu)+'</div>';
+  }
+  html+='<div class="pfx-options" id="pfx-options">';
+  opts.forEach(function(o){
+    if(pfxLetterDir==='letter2meaning') html+='<button class="pfx-option" type="button" data-pfxopt="'+escAttr(o.id)+'">'+(currentLang==='en'?o.meaningEn:o.meaningRu)+'</button>';
+    else html+='<button class="pfx-option" type="button" data-pfxopt="'+escAttr(o.id)+'"><span class="he" lang="he" dir="rtl">'+o.id+'</span></button>';
+  });
+  html+='</div><div id="pfx-result"></div></div>';
+  area.innerHTML=html;
+  document.getElementById('pfx-options').querySelectorAll('[data-pfxopt]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(pfxAnswered) return;
+      pfxAnswered=true;
+      const correct=btn.dataset.pfxopt===q.id;
+      pfxRecord(q.key,correct,performance.now()-pfxStart,btn.dataset.pfxopt,'choice');
+      document.getElementById('pfx-options').querySelectorAll('[data-pfxopt]').forEach(function(b){
+        if(b.dataset.pfxopt===q.id) b.classList.add('correct');
+        else if(b===btn) b.classList.add('wrong');
+        b.disabled=true;
+      });
+      const res=document.getElementById('pfx-result');
+      if(res) res.innerHTML=pfxResultHTML(p,correct);
+      schedulePfxNext(correct?1000:2200);
+    });
+  });
+}
+function pfxItemResultHTML(q,correct,extra){
+  let html='<div class="result-box '+(correct?'ok':'bad')+'"><div class="result-title">'+(correct?'✅ '+t('correct'):'❌ '+t('wrong'))+'</div>';
+  html+='<div class="result-he he" lang="he" dir="rtl">'+q.p+'</div>';
+  if(settings.translit) html+='<div class="result-translit">'+q.tr+'</div>';
+  html+='<div class="result-gloss">'+(currentLang==='en'?q.glossEn:q.glossRu)+'</div>';
+  html+='<div class="result-gloss">'+t('pfxRuleLabel')+': '+pfxTagLabel(q.tag)+'</div>';
+  html+=speakBtn(q.p);
+  html+=extra||'';
+  html+='</div>';
+  return html;
+}
+function renderPfxBuild(){
+  const area=document.getElementById('pfx-area');
+  if(!area) return;
+  if(!pfxQ) pfxQ=pfxPick(pfxBuildPool());
+  const q=pfxQ;
+  if(!q){area.innerHTML='<div class="empty-train">'+t('pfxEmpty')+'</div>';return;}
+  pfxAnswered=false;pfxHintShown=false;pfxStart=performance.now();
+  let html='<div class="pfx-card"><div class="pfx-prompt">'+t('pfxBuildQuestion')+'</div><div class="pfx-build-tiles">';
+  q.prefixes.forEach(function(letter,idx){
+    if(idx>0) html+='<span class="pfx-build-plus">+</span>';
+    html+='<span class="pfx-build-tile he" lang="he" dir="rtl">'+letter+'</span>';
+  });
+  if(q.art) html+='<span class="pfx-build-plus">+</span><span class="pfx-build-tile he" lang="he" dir="rtl">ה</span>';
+  html+='<span class="pfx-build-plus">+</span><span class="pfx-build-tile he" lang="he" dir="rtl">'+q.wordP+'</span>';
+  html+='</div><div class="pfx-note">'+t('pfxBuildNote')+'</div><div id="pfx-hint-box" style="display:none;"></div>';
+  html+='<input class="he-input" id="pfx-input" lang="he" dir="rtl" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="…">';
+  html+='<div class="nikud-notice" id="nikud-notice"></div>';
+  html+='<div class="action-row"><button class="btn-secondary" id="pfx-hint" type="button">💡 '+t('hint')+'</button><button class="btn-primary" id="pfx-check" type="button">'+t('check')+'</button></div><div id="pfx-result"></div></div>';
+  area.innerHTML=html;
+  const input=document.getElementById('pfx-input');
+  activeInput=input;
+  const groupPool=PFX_ITEMS.filter(function(it){return it.group===q.group&&it.id!==q.id;}).map(function(it){return {u:it.u,p:it.p,pm:null,label:(currentLang==='en'?it.glossEn:it.glossRu)};});
+  const acc=[{u:q.u,p:q.p,pm:null,label:(currentLang==='en'?q.glossEn:q.glossRu)}];
+  function doCheck(show){
+    if(pfxAnswered) return;
+    const res=show?{status:'wrong',reason:'',readings:[]}:checkTyped(groupPool,acc,input.value,'smart');
+    if(res.status==='ambiguous'){showNikudNotice(res);return;}
+    pfxAnswered=true;
+    const correct=res.status==='correct';
+    pfxRecord(q.key,correct,performance.now()-pfxStart,input.value,'type');
+    input.readOnly=true;
+    const resBox=document.getElementById('pfx-result');
+    let extra='';
+    if(!correct){
+      extra='<div class="result-wrong-note">'+t('answerWas')+' <span class="he" lang="he" dir="rtl">'+q.p+'</span></div>';
+      if(input.value) extra+='<div class="result-wrong-note">'+t('youTyped')+' <span class="he" lang="he" dir="rtl">'+escHtml(input.value)+'</span></div>';
+      if(res.reason==='nikud') extra+='<div class="colloq-note">'+t('nikudWrong')+'</div>';
+      if(res.reason==='needNikud') extra+='<div class="colloq-note">'+t('nikudNeed')+'</div>';
+    }
+    if(resBox) resBox.innerHTML=pfxItemResultHTML(q,correct,extra);
+    schedulePfxNext(correct?1100:2400);
+  }
+  document.getElementById('pfx-check').addEventListener('click',function(){doCheck(false);});
+  input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doCheck(false);}});
+  input.addEventListener('input',function(){
+    if(pfxAnswered) return;
+    const res=checkTyped(groupPool,acc,input.value,'smart');
+    if(res.status==='correct') doCheck(false);
+    else if(res.status==='ambiguous') showNikudNotice(res);
+    else hideNikudNotice();
+  });
+  document.getElementById('pfx-hint').addEventListener('click',function(){
+    pfxHintShown=true;
+    const box=document.getElementById('pfx-hint-box');
+    box.style.display='block';box.className='hint-box';
+    box.innerHTML='<div class="hint-gloss">'+(currentLang==='en'?q.glossEn:q.glossRu)+'</div>';
+  });
+}
+function pfxFormOptions(q){
+  const p=pfxPrefix(q.prefix);
+  const opts=[q.pfxForm];
+  if(p) p.forms.forEach(function(f){if(!f.noQuiz&&opts.indexOf(f.p)<0)opts.push(f.p);});
+  const all=[];
+  PREFIXES.forEach(function(pp){pp.forms.forEach(function(f){if(!f.noQuiz&&all.indexOf(f.p)<0)all.push(f.p);});});
+  shuffle(all);
+  all.forEach(function(f){if(opts.length<4&&opts.indexOf(f)<0)opts.push(f);});
+  return shuffle(opts);
+}
+function renderPfxForm(){
+  const area=document.getElementById('pfx-area');
+  if(!area) return;
+  if(!pfxQ) pfxQ=pfxPick(pfxWordPool());
+  const q=pfxQ;
+  if(!q){area.innerHTML='<div class="empty-train">'+t('pfxEmpty')+'</div>';return;}
+  pfxAnswered=false;pfxStart=performance.now();
+  const opts=pfxFormOptions(q);
+  let html='<div class="pfx-card"><div class="pfx-prompt">'+t('pfxFormQuestion')+'</div><div class="pfx-prompt"><span class="he" lang="he" dir="rtl" style="font-size:28px;">'+q.prefix+'</span> + <span class="he" lang="he" dir="rtl" style="font-size:24px;">'+q.wordP+'</span>'+(q.art?'<span class="pfx-badge">'+t('pfxArticle')+'</span>':'')+'</div>';
+  html+='<div class="pfx-options" id="pfx-options">';
+  opts.forEach(function(p){html+='<button class="pfx-option" type="button" data-pfxform="'+escAttr(p)+'"><span class="he" lang="he" dir="rtl">'+p+'</span></button>';});
+  html+='</div><div id="pfx-result"></div></div>';
+  area.innerHTML=html;
+  document.getElementById('pfx-options').querySelectorAll('[data-pfxform]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(pfxAnswered) return;
+      pfxAnswered=true;
+      const correct=btn.dataset.pfxform===q.pfxForm;
+      pfxRecord(q.key,correct,performance.now()-pfxStart,btn.dataset.pfxform,'choice');
+      document.getElementById('pfx-options').querySelectorAll('[data-pfxform]').forEach(function(b){
+        if(b.dataset.pfxform===q.pfxForm) b.classList.add('correct');
+        else if(b===btn) b.classList.add('wrong');
+        b.disabled=true;
+      });
+      const res=document.getElementById('pfx-result');
+      if(res) res.innerHTML=pfxItemResultHTML(q,correct,'');
+      schedulePfxNext(correct?1100:2400);
+    });
+  });
+}
+function pfxDecompParts(q){
+  const parts=q.prefixes.slice();
+  if(q.art) parts.push('ה');
+  parts.push(q.word);
+  return parts;
+}
+function pfxDecomp(q){
+  const parts=pfxDecompParts(q);
+  return {key:parts.join('|'),html:parts.map(function(x){return '<span class="he" lang="he" dir="rtl">'+x+'</span>';}).join(' + ')};
+}
+function pfxParseOptions(q){
+  const correct=pfxDecomp(q);
+  const opts=[correct];
+  const prefixes=PREFIXES.map(function(p){return p.id;});
+  function add(parts){
+    const key=parts.join('|');
+    if(opts.some(function(o){return o.key===key;})) return;
+    opts.push({key:key,html:parts.map(function(x){return '<span class="he" lang="he" dir="rtl">'+x+'</span>';}).join(' + ')});
+  }
+  const base=pfxDecompParts(q);
+  add(base.filter(function(x){return x!=='ה';}));
+  const withArt=base.slice();
+  if(withArt.indexOf('ה')<0) withArt.splice(withArt.length-1,0,'ה');
+  add(withArt);
+  const other=prefixes.filter(function(x){return x!==q.prefix;});
+  shuffle(other);
+  for(let i=0;i<other.length&&opts.length<4;i++){
+    const parts=q.prefixes.slice();parts[0]=other[i];if(q.art)parts.push('ה');parts.push(q.word);add(parts);
+  }
+  return shuffle(opts);
+}
+function renderPfxParse(){
+  const area=document.getElementById('pfx-area');
+  if(!area) return;
+  if(!pfxQ) pfxQ=pfxPick(pfxWordPool());
+  const q=pfxQ;
+  if(!q){area.innerHTML='<div class="empty-train">'+t('pfxEmpty')+'</div>';return;}
+  pfxAnswered=false;pfxStart=performance.now();
+  const opts=pfxParseOptions(q);
+  const correct=pfxDecomp(q);
+  let html='<div class="pfx-card"><div class="pfx-prompt">'+t('pfxParseQuestion')+'</div><div class="pfx-word-big he" lang="he" dir="rtl">'+q.p+'</div><div class="pfx-options" id="pfx-options">';
+  opts.forEach(function(o){html+='<button class="pfx-option pfx-decomp" type="button" data-pfxdecomp="'+escAttr(o.key)+'">'+o.html+'</button>';});
+  html+='</div><div id="pfx-result"></div></div>';
+  area.innerHTML=html;
+  document.getElementById('pfx-options').querySelectorAll('[data-pfxdecomp]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(pfxAnswered) return;
+      pfxAnswered=true;
+      const ok=btn.dataset.pfxdecomp===correct.key;
+      pfxRecord(q.key,ok,performance.now()-pfxStart,btn.dataset.pfxdecomp,'choice');
+      document.getElementById('pfx-options').querySelectorAll('[data-pfxdecomp]').forEach(function(b){
+        if(b.dataset.pfxdecomp===correct.key) b.classList.add('correct');
+        else if(b===btn) b.classList.add('wrong');
+        b.disabled=true;
+      });
+      const res=document.getElementById('pfx-result');
+      if(res) res.innerHTML=pfxItemResultHTML(q,ok,'<div class="result-gloss">'+t('pfxCorrectAnswer')+' '+correct.html+'</div>');
+      schedulePfxNext(ok?1100:2400);
+    });
+  });
+}
+function makePfxSpeedQuestion(){
+  const types=['letter','form','parse'];
+  const type=types[Math.floor(Math.random()*types.length)];
+  if(type==='letter'){
+    const pool=pfxLetterPool();
+    if(!pool.length) return null;
+    const p=pool[Math.floor(Math.random()*pool.length)];
+    return {type:'letter',id:p.id,prefix:p.id,key:'pfxm:'+p.id,options:pfxLetterOptions(p.id)};
+  }
+  const pool=pfxWordPool();
+  if(!pool.length) return null;
+  const it=pool[Math.floor(Math.random()*pool.length)];
+  if(type==='form') return {type:'form',item:it,key:it.key,options:pfxFormOptions(it)};
+  return {type:'parse',item:it,key:it.key,options:pfxParseOptions(it)};
+}
+function pfxSpeedQuestionHTML(q){
+  if(q.type==='letter'){
+    const p=pfxPrefix(q.id);
+    let html='<div class="pfx-prompt">'+t('pfxLetterQuestion')+'</div><div class="pfx-letter-big he" lang="he" dir="rtl">'+p.id+'</div><div class="pfx-options" id="pfx-speed-options">';
+    q.options.forEach(function(o){html+='<button class="pfx-option" type="button" data-pfxspeed="'+escAttr(o.id)+'">'+(currentLang==='en'?o.meaningEn:o.meaningRu)+'</button>';});
+    html+='</div>';
+    return html;
+  }
+  const it=q.item;
+  if(q.type==='form'){
+    let html='<div class="pfx-prompt">'+t('pfxFormQuestion')+'</div><div class="pfx-prompt"><span class="he" lang="he" dir="rtl" style="font-size:28px;">'+it.prefix+'</span> + <span class="he" lang="he" dir="rtl" style="font-size:24px;">'+it.wordP+'</span>'+(it.art?'<span class="pfx-badge">'+t('pfxArticle')+'</span>':'')+'</div><div class="pfx-options" id="pfx-speed-options">';
+    q.options.forEach(function(p){html+='<button class="pfx-option" type="button" data-pfxspeed="'+escAttr(p)+'"><span class="he" lang="he" dir="rtl">'+p+'</span></button>';});
+    html+='</div>';
+    return html;
+  }
+  let html='<div class="pfx-prompt">'+t('pfxParseQuestion')+'</div><div class="pfx-word-big he" lang="he" dir="rtl">'+it.p+'</div><div class="pfx-options" id="pfx-speed-options">';
+  q.options.forEach(function(o){html+='<button class="pfx-option pfx-decomp" type="button" data-pfxspeed="'+escAttr(o.key)+'">'+o.html+'</button>';});
+  html+='</div>';
+  return html;
+}
+function attachPfxSpeedHandlers(q){
+  const opts=document.getElementById('pfx-speed-options');
+  if(!opts) return;
+  opts.querySelectorAll('[data-pfxspeed]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(!pfxSpeedState||!pfxSpeedState.running) return;
+      let correct=false;
+      if(q.type==='letter') correct=btn.dataset.pfxspeed===q.id;
+      else if(q.type==='form') correct=btn.dataset.pfxspeed===q.item.pfxForm;
+      else correct=btn.dataset.pfxspeed===pfxDecomp(q.item).key;
+      pfxRecord(q.key,correct,performance.now()-pfxSpeedState.qStart,btn.dataset.pfxspeed,'choice');
+      if(correct) pfxSpeedState.correct++;
+      else noteWrong(q.key);
+      pfxSpeedState.q=makePfxSpeedQuestion();
+      pfxSpeedState.qStart=performance.now();
+      if(!pfxSpeedState.q){finishPfxSpeed();return;}
+      renderPfxSpeed();
+    });
+  });
+}
+function renderPfxSpeed(){
+  const area=document.getElementById('pfx-area');
+  if(!area) return;
+  if(!pfxSpeedState||!pfxSpeedState.running){
+    if(!pfxSpeedState) pfxSpeedState={running:false,correct:0};
+    const best=bestTimes.pfxSpeed||0;
+    let html='<div class="pfx-card"><div class="section-title">'+t('pfxModeSpeed')+'</div><div class="section-intro">'+t('pfxSpeedStart')+'</div>';
+    if(best) html+='<div class="stat-pill" style="margin-bottom:10px;">'+t('pfxSpeedBest')+': <b>'+best+'</b></div>';
+    html+='<button class="btn-primary" id="pfx-speed-start" type="button">'+t('pfxSpeedStart')+'</button></div>';
+    area.innerHTML=html;
+    document.getElementById('pfx-speed-start').addEventListener('click',startPfxSpeed);
+    return;
+  }
+  const q=pfxSpeedState.q;
+  if(!q){finishPfxSpeed();return;}
+  const left=Math.max(0,Math.ceil((pfxSpeedState.duration-(performance.now()-pfxSpeedState.start))/1000));
+  let html='<div class="pfx-card"><div class="speed-stats"><span>⏱ <b id="pfx-speed-left">'+left+'</b>s</span><span>✅ <b id="pfx-speed-correct">'+pfxSpeedState.correct+'</b></span></div>';
+  html+='<div class="speed-bar"><div class="speed-fill" id="pfx-speed-fill" style="width:'+Math.max(0,Math.min(100,(pfxSpeedState.duration-(performance.now()-pfxSpeedState.start))/pfxSpeedState.duration*100))+'%"></div></div>';
+  html+=pfxSpeedQuestionHTML(q);
+  html+='</div>';
+  area.innerHTML=html;
+  attachPfxSpeedHandlers(q);
+}
+function startPfxSpeed(){
+  if(!pfxSpeedState) pfxSpeedState={};
+  pfxSpeedState.running=true;pfxSpeedState.correct=0;pfxSpeedState.duration=60000;pfxSpeedState.start=performance.now();
+  pfxSpeedState.q=makePfxSpeedQuestion();
+  pfxSpeedState.qStart=performance.now();
+  if(pfxSpeedState.interval) clearInterval(pfxSpeedState.interval);
+  pfxSpeedState.interval=setInterval(function(){
+    if(!pfxSpeedState||!pfxSpeedState.running) return;
+    const remain=pfxSpeedState.duration-(performance.now()-pfxSpeedState.start);
+    const l=document.getElementById('pfx-speed-left');if(l)l.textContent=Math.max(0,Math.ceil(remain/1000));
+    const f=document.getElementById('pfx-speed-fill');if(f)f.style.width=Math.max(0,Math.min(100,remain/pfxSpeedState.duration*100))+'%';
+    if(remain<=0) finishPfxSpeed();
+  },100);
+  renderPfxSpeed();
+}
+function finishPfxSpeed(){
+  if(!pfxSpeedState) return;
+  if(pfxSpeedState.interval){clearInterval(pfxSpeedState.interval);pfxSpeedState.interval=null;}
+  pfxSpeedState.running=false;
+  const score=pfxSpeedState.correct;
+  const best=bestTimes.pfxSpeed||0;
+  const isNew=score>best;
+  if(isNew){bestTimes.pfxSpeed=score;saveBest();}
+  const area=document.getElementById('pfx-area');
+  if(area) area.innerHTML='<div class="pfx-card"><div class="section-title">'+t('pfxSpeedDone')+'</div><div class="modal-stats"><div>'+t('pfxSpeedCorrect')+': <b>'+score+'</b></div><div>'+t('pfxSpeedBest')+': <b>'+bestTimes.pfxSpeed+'</b></div></div>'+(isNew?'<div class="colloq-note" style="text-align:center;">🏆 '+t('pfxSpeedNewRecord')+'</div>':'')+'<div class="action-row"><button class="btn-primary" id="pfx-speed-again" type="button">'+t('again')+'</button></div></div>';
+  const again=document.getElementById('pfx-speed-again');
+  if(again) again.addEventListener('click',function(){pfxSpeedState=null;renderPfxArea();});
+  activeInput=null;
+}
+function findPfxItem(p){
+  let it=PFX_ITEMS.find(function(x){return x.p===p;});
+  if(it) return it;
+  const n=N(p);
+  return PFX_ITEMS.find(function(x){return N(x.p)===n;})||null;
+}
+function pfxPhraseOptions(s){
+  const item=findPfxItem(s.answer);
+  const correct=item?item.p:s.answer;
+  const opts=[correct];
+  const pool=PFX_ITEMS.map(function(it){return it.p;});
+  shuffle(pool);
+  pool.forEach(function(p){if(opts.length<4&&!opts.some(function(o){return N(o)===N(p);}))opts.push(p);});
+  return shuffle(opts);
+}
+function renderPfxPhrases(){
+  const area=document.getElementById('pfx-area');
+  if(!area) return;
+  if(!pfxPhraseQueue.length){pfxPhraseQueue=PFX_PHRASES.map(function(s,i){return i;});shuffle(pfxPhraseQueue);pfxPhrasePos=0;}
+  const s=PFX_PHRASES[pfxPhraseQueue[pfxPhrasePos%pfxPhraseQueue.length]];
+  pfxStart=performance.now();
+  const item=findPfxItem(s.answer);
+  const p=item?item.p:s.answer;
+  const tr=item?item.tr:'';
+  const glossRu=item?item.glossRu:s.ru;
+  const glossEn=item?item.glossEn:s.en;
+  const prefix=item?item.prefix:s.answer.charAt(0);
+  const key=item?item.key:'pfx:'+prefix+':'+s.tag;
+  const q={p:p,u:stripNikud(p),tr:tr,glossRu:glossRu,glossEn:glossEn,tag:s.tag,key:key};
+  const parts=s.he.split('___');
+  let html='<div class="section-title">'+t('pfxPhrasesTitle')+'</div>';
+  html+='<div class="subtabs" style="margin-bottom:12px;"><div class="subtab '+(pfxPhraseMode==='choice'?'active':'')+'" data-pfxpmode="choice">'+t('pfxPhraseChoice')+'</div><div class="subtab '+(pfxPhraseMode==='type'?'active':'')+'" data-pfxpmode="type">'+t('pfxPhraseType')+'</div></div>';
+  html+='<div class="pfx-card"><div class="phrase-he he" lang="he" dir="rtl">'+parts[0]+'<span class="phrase-blank" id="pfx-phrase-blank">____</span>'+(parts[1]||'')+'</div>';
+  html+='<div class="action-row" style="margin-top:0;margin-bottom:10px;"><button class="btn-secondary" id="pfx-phrase-hint" type="button">💡 '+t('pfxPhraseHint')+'</button>'+(speechAvailable()?'<button class="btn-secondary" id="pfx-phrase-read" type="button">🔊 '+t('phraseRead')+'</button>':'')+'</div>';
+  html+='<div id="pfx-phrase-hint-box" style="display:none;"></div>';
+  if(pfxPhraseMode==='choice'){
+    const opts=pfxPhraseOptions(s);
+    html+='<div class="pfx-options" id="pfx-phrase-options">';
+    opts.forEach(function(o){html+='<button class="pfx-option" type="button" data-pfxphraseopt="'+escAttr(o)+'"><span class="he" lang="he" dir="rtl">'+o+'</span></button>';});
+    html+='</div>';
+  }else{
+    html+='<input class="he-input" id="pfx-phrase-input" lang="he" dir="rtl" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="…">';
+    html+='<div class="nikud-notice" id="nikud-notice"></div>';
+    html+='<div class="action-row"><button class="btn-primary" id="pfx-phrase-check" type="button">'+t('check')+'</button></div>';
+  }
+  html+='<div id="pfx-phrase-result"></div>';
+  html+='<div class="action-row"><button class="btn-ghost" id="pfx-phrase-next" type="button" style="display:none;">'+t('pfxPhraseNext')+' →</button></div></div>';
+  area.innerHTML=html;
+  const hintBox=document.getElementById('pfx-phrase-hint-box');
+  document.getElementById('pfx-phrase-hint').addEventListener('click',function(){
+    pfxPhraseHintShown=true;
+    hintBox.style.display='block';hintBox.className='hint-box';
+    hintBox.innerHTML='<div class="hint-gloss">'+(currentLang==='en'?s.en:s.ru)+'</div>';
+  });
+  const readBtn=document.getElementById('pfx-phrase-read');
+  if(readBtn) readBtn.addEventListener('click',function(){speakHebrew(s.he.replace('___',p));});
+  if(pfxPhraseMode==='choice'){
+    document.getElementById('pfx-phrase-options').querySelectorAll('[data-pfxphraseopt]').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        if(pfxPhraseAnswered) return;
+        pfxPhraseAnswered=true;
+        const ok=N(btn.dataset.pfxphraseopt)===N(p);
+        pfxRecord(key,ok,performance.now()-pfxStart,btn.dataset.pfxphraseopt,'choice');
+        document.getElementById('pfx-phrase-options').querySelectorAll('[data-pfxphraseopt]').forEach(function(b){
+          if(N(b.dataset.pfxphraseopt)===N(p)) b.classList.add('correct');
+          else if(b===btn) b.classList.add('wrong');
+          b.disabled=true;
+        });
+        const blank=document.getElementById('pfx-phrase-blank');if(blank)blank.textContent=p;
+        const res=document.getElementById('pfx-phrase-result');
+        if(res) res.innerHTML=pfxItemResultHTML(q,ok,'<div style="text-align:center;margin-top:6px;">'+speakBtn(s.he.replace('___',p))+'</div>');
+        document.getElementById('pfx-phrase-next').style.display='inline-block';
+      });
+    });
+  }else{
+    const input=document.getElementById('pfx-phrase-input');
+    activeInput=input;
+    pfxStart=performance.now();
+    const groupPool=item?PFX_ITEMS.filter(function(it){return it.group===item.group&&it.id!==item.id;}).map(function(it){return {u:it.u,p:it.p,pm:null,label:(currentLang==='en'?it.glossEn:it.glossRu)};}):[];
+    const acc=[{u:q.u,p:q.p,pm:null,label:(currentLang==='en'?q.glossEn:q.glossRu)}];
+    function doPhraseCheck(){
+      if(pfxPhraseAnswered) return;
+      const res=checkTyped(groupPool,acc,input.value,'smart');
+      if(res.status==='ambiguous'){showNikudNotice(res);return;}
+      pfxPhraseAnswered=true;
+      const ok=res.status==='correct';
+      pfxRecord(key,ok,performance.now()-pfxStart,input.value,'type');
+      input.readOnly=true;
+      const blank=document.getElementById('pfx-phrase-blank');if(blank)blank.textContent=p;
+      let extra='';
+      if(!ok){
+        extra='<div class="result-wrong-note">'+t('answerWas')+' <span class="he" lang="he" dir="rtl">'+p+'</span></div>';
+        if(input.value) extra+='<div class="result-wrong-note">'+t('youTyped')+' <span class="he" lang="he" dir="rtl">'+escHtml(input.value)+'</span></div>';
+        if(res.reason==='nikud') extra+='<div class="colloq-note">'+t('nikudWrong')+'</div>';
+        if(res.reason==='needNikud') extra+='<div class="colloq-note">'+t('nikudNeed')+'</div>';
+      }
+      const resBox=document.getElementById('pfx-phrase-result');
+      if(resBox) resBox.innerHTML=pfxItemResultHTML(q,ok,extra+'<div style="text-align:center;margin-top:6px;">'+speakBtn(s.he.replace('___',p))+'</div>');
+      document.getElementById('pfx-phrase-next').style.display='inline-block';
+    }
+    document.getElementById('pfx-phrase-check').addEventListener('click',doPhraseCheck);
+    input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doPhraseCheck();}});
+    input.addEventListener('input',function(){
+      if(pfxPhraseAnswered) return;
+      const res=checkTyped(groupPool,acc,input.value,'smart');
+      if(res.status==='correct') doPhraseCheck();
+      else if(res.status==='ambiguous') showNikudNotice(res);
+      else hideNikudNotice();
+    });
+  }
+  document.getElementById('pfx-phrase-next').addEventListener('click',function(){
+    pfxPhrasePos=(pfxPhrasePos+1)%pfxPhraseQueue.length;
+    pfxPhraseAnswered=false;pfxPhraseHintShown=false;
+    renderPfxArea();
+  });
+  syncKeyboard();
+}
+function prefixMapHTML(){
+  const tags=['plain','article','sheva','yod','guttural','u','combo','pron'];
+  let html='<div class="section-title">'+t('pfxHeatTitle')+'</div><div class="section-intro">'+t('pfxHeatIntro')+'</div>';
+  html+='<div class="pfx-heat-scroll"><table class="pfx-heat-table"><thead><tr><th></th>';
+  tags.forEach(function(tag){html+='<th>'+pfxTagLabel(tag)+'</th>';});
+  html+='</tr></thead><tbody>';
+  PREFIXES.forEach(function(p){
+    html+='<tr><th class="pfx-heat-role"><span class="he" lang="he" dir="rtl">'+p.id+'</span></th>';
+    tags.forEach(function(tag){
+      const key='pfx:'+p.id+':'+tag;
+      const rate=statRate(key);
+      const bg=rate===null?'var(--track)':rate>=80?'var(--olive)':rate>=50?'var(--accent2)':'var(--danger)';
+      html+='<td><button class="pfx-heat-cell" type="button" data-pfxheat="'+p.id+'|'+tag+'" style="background:'+bg+'">'+(rate===null?'':rate+'%')+'</button></td>';
+    });
+    html+='</tr>';
+  });
+  html+='</tbody></table></div>';
+  const keys=Array.from(new Set(PFX_ITEMS.map(function(it){return it.key;})));
+  let done=0;keys.forEach(function(k){if(isMastered(k))done++;});
+  const pct=keys.length?Math.round(done/keys.length*100):0;
+  html+='<div class="pfx-progress"><span>'+t('pfxProgress')+': '+done+' '+t('of')+' '+keys.length+'</span><div class="pfx-progress-bar"><div class="pfx-progress-fill" style="width:'+pct+'%"></div></div></div>';
+  return html;
+}
+function openPfxHeat(prefix,tag){
+  const key='pfx:'+prefix+':'+tag;
+  const s=stats[key];
+  const rate=statRate(key);
+  const attempts=s?s.r+s.w:0;
+  const examples=PFX_ITEMS.filter(function(it){return it.prefix===prefix&&it.tag===tag;}).slice(0,4);
+  let html='<div class="modal-title"><span class="he" lang="he" dir="rtl" style="font-size:24px;">'+prefix+'</span> · '+pfxTagLabel(tag)+'</div>';
+  html+='<div class="modal-stats"><div>'+t('attempts')+': <b>'+attempts+'</b></div><div>'+t('accuracy')+': <b>'+(rate===null?t('noData'):rate+'%')+'</b></div><div>'+t('avgTime')+': <b>'+(s&&s.ms?Math.round(s.ms)+' ms':t('noData'))+'</b></div><div>'+t('fastStreak')+': <b>'+(s?s.fs:0)+'</b></div></div>';
+  if(examples.length){
+    html+='<div class="pfx-examples">';
+    examples.forEach(function(it){
+      html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl" style="font-size:20px;">'+it.p+'</span><span>'+it.tr+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
+    });
+    html+='</div>';
+  }else{
+    html+='<div class="section-intro">'+t('noData')+'</div>';
+  }
+  openModal(html,true);
+}
 const HE_KEYS=['א','ב','ג','ד','ה','ו','ז','ח','ט','י','כ','ך','ל','מ','ם','נ','ן','ס','ע','פ','ף','צ','ץ','ק','ר','ש','ת'];
 function isCoarsePointer(){return !!(window.matchMedia&&window.matchMedia('(pointer: coarse)').matches);}
 function focusNoScroll(el){if(!el)return;try{el.focus({preventScroll:true});}catch(e){try{el.focus();}catch(err){}}}
 function focusEnd(input){if(!input)return;if(document.activeElement!==input)focusNoScroll(input);const len=input.value.length;try{input.setSelectionRange(len,len);}catch(e){}}
+function prefixTypingMode(){
+  return currentPrefixSub==='train'&&(pfxMode==='build'||(pfxMode==='phrases'&&pfxPhraseMode==='type'));
+}
 function kbContextOK(){
   if(currentTab==='train') return currentMode==='role2form'||currentMode==='perspective'||currentMode==='run';
   if(currentTab==='phrases') return currentPhraseMode==='type';
+  if(currentTab==='prefix') return prefixTypingMode();
   return false;
+}
+const NIKUD_MARKS=[
+  {ch:'\u05B7',key:'nikudPatah'},{ch:'\u05B8',key:'nikudQamats'},{ch:'\u05B5',key:'nikudTsere'},
+  {ch:'\u05B6',key:'nikudSegol'},{ch:'\u05B4',key:'nikudHiriq'},{ch:'\u05B9',key:'nikudHolam'},
+  {ch:'\u05BB',key:'nikudQubuts'},{ch:'\u05B0',key:'nikudShva'},{ch:'\u05B2',key:'nikudHatafPatah'},
+  {ch:'\u05B1',key:'nikudHatafSegol'},{ch:'\u05B3',key:'nikudHatafQamats'},{ch:'\u05BC',key:'nikudDagesh'}
+];
+function buildNikudRow(){
+  const row=document.getElementById('keyboard-nikud');
+  if(!row) return;
+  row.innerHTML='';
+  NIKUD_MARKS.forEach(function(m){
+    const b=document.createElement('button');
+    b.type='button';b.className='key-nikud';b.textContent='◌'+m.ch;b.setAttribute('aria-label',t(m.key));
+    bindKeyAction(b,function(){kbInsert(m.ch);});
+    row.appendChild(b);
+  });
+}
+function nikudRowNeeded(){
+  if(currentTab==='prefix'&&prefixTypingMode()) return true;
+  return effNikudCheck()!=='off';
+}
+function syncNikudRow(){
+  const show=keyboardOpen&&kbContextOK()&&nikudRowNeeded();
+  const row=document.getElementById('keyboard-nikud');
+  if(row) row.style.display=show?'flex':'none';
+  document.body.classList.toggle('nikud-row-open',show);
 }
 function applyKbGuard(){
   const active=keyboardOpen&&kbContextOK();
@@ -2420,6 +3728,7 @@ function syncKeyboard(){
   const btn=document.getElementById('btn-keyboard');
   if(btn) btn.classList.toggle('active',show);
   applyKbGuard();
+  syncNikudRow();
 }
 function setKeyboardOpen(open){
   keyboardOpen=open;saveKeyboard();
@@ -2488,6 +3797,44 @@ function bindEvents(){
     if(mode){stopTimers();currentMode=mode.dataset.mode;currentQ=null;keyMiniQ=null;runState=null;speedState=null;renderModePills();renderTrainArea();return;}
   });
   document.addEventListener('click',function(e){
+    const ec=e.target.closest('[data-endcolors-chip]');
+    if(ec){toggleEndColors();return;}
+    const nc=e.target.closest('[data-nikudchip]');
+    if(nc){cycleNikudCheck();return;}
+  });
+  function togglePfxFilter(key,val){
+    const arr=settings.pfxFilter[key];
+    const i=arr.indexOf(val);
+    if(i>=0) arr.splice(i,1); else arr.push(val);
+    saveSettings();renderPfxFilters();pfxQ=null;renderPfxArea();
+  }
+  document.getElementById('screen-prefix').addEventListener('click',function(e){
+    const sub=e.target.closest('[data-psub]');
+    if(sub){stopTimers();currentPrefixSub=sub.dataset.psub;renderPrefix();return;}
+    const letter=e.target.closest('[data-pfxletter]');
+    if(letter){openPrefixModal(letter.dataset.pfxletter);return;}
+    const heat=e.target.closest('[data-pfxheat]');
+    if(heat){const a=heat.dataset.pfxheat.split('|');openPfxHeat(a[0],a[1]);return;}
+    const pref=e.target.closest('[data-pfxpref]');
+    if(pref){togglePfxFilter('prefixes',pref.dataset.pfxpref);return;}
+    const tag=e.target.closest('[data-pfxtag]');
+    if(tag){togglePfxFilter('tags',tag.dataset.pfxtag);return;}
+    const form=e.target.closest('[data-pfxformfilter]');
+    if(form){togglePfxFilter('forms',form.dataset.pfxformfilter);return;}
+    const weak=e.target.closest('[data-pfxweak]');
+    if(weak){settings.pfxFilter.weak=!settings.pfxFilter.weak;saveSettings();renderPfxFilters();pfxQ=null;renderPfxArea();return;}
+    const na=e.target.closest('[data-pfxnotauto]');
+    if(na){settings.pfxFilter.notAuto=!settings.pfxFilter.notAuto;saveSettings();renderPfxFilters();pfxQ=null;renderPfxArea();return;}
+    const reset=e.target.closest('[data-pfxreset]');
+    if(reset){settings.pfxFilter={prefixes:[],tags:[],forms:[],weak:false,notAuto:false};saveSettings();renderPfxFilters();pfxQ=null;renderPfxArea();return;}
+    const mode=e.target.closest('[data-pfxmode]');
+    if(mode){stopTimers();pfxMode=mode.dataset.pfxmode;pfxQ=null;pfxAnswered=false;pfxHintShown=false;pfxPhraseAnswered=false;pfxPhraseHintShown=false;pfxSpeedState=null;renderPfxModes();renderPfxArea();return;}
+    const dir=e.target.closest('[data-pfxdir]');
+    if(dir){pfxLetterDir=dir.dataset.pfxdir;pfxQ=null;renderPfxArea();return;}
+    const pmode=e.target.closest('[data-pfxpmode]');
+    if(pmode){pfxPhraseMode=pmode.dataset.pfxpmode;pfxPhraseAnswered=false;pfxPhraseHintShown=false;renderPfxArea();return;}
+  });
+  document.addEventListener('click',function(e){
     const sp=e.target.closest('[data-say]');
     if(sp){e.preventDefault();speakHebrew(sp.getAttribute('data-say'));}
   });
@@ -2516,8 +3863,11 @@ function init(){
   initTrainFilter();
   applyTheme(currentTheme,false);
   buildKeyboard();
+  buildNikudRow();
   bindEvents();
+  applyEndColorsSetting();
   applyLanguage();
+  applyNikudCheckSetting();
   updateProgress();
   renderCurrent();
   syncKeyboard();
