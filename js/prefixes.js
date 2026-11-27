@@ -228,7 +228,7 @@ function renderPfxBuild(){
     if(idx>0) html+='<span class="pfx-build-plus">+</span>';
     html+='<span class="pfx-build-tile he" lang="he" dir="rtl">'+letter+'</span>';
   });
-  if(q.art) html+='<span class="pfx-build-plus">+</span><span class="pfx-build-tile he" lang="he" dir="rtl">ה</span>';
+  if(q.art&&q.prefixes.indexOf('ה')<0) html+='<span class="pfx-build-plus">+</span><span class="pfx-build-tile he" lang="he" dir="rtl">ה</span>';
   html+='<span class="pfx-build-plus">+</span><span class="pfx-build-tile he" lang="he" dir="rtl">'+q.wordP+'</span>';
   html+='</div><div class="pfx-note">'+t('pfxBuildNote')+'</div><div id="pfx-hint-box" style="display:none;"></div>';
   html+='<input class="he-input" id="pfx-input" lang="he" dir="rtl" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="…">';
@@ -316,7 +316,9 @@ function renderPfxForm(){
 }
 function pfxDecompParts(q){
   const parts=q.prefixes.slice();
-  if(q.art) parts.push('ה');
+  // The article is a prefix of its own in the ה entries, so it is already in
+  // parts there; adding it again gave ה + ה + word.
+  if(q.art&&parts.indexOf('ה')<0) parts.push('ה');
   parts.push(q.word);
   return parts;
 }
