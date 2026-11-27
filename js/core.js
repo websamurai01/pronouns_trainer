@@ -400,7 +400,7 @@ function openModal(html,wide){
 }
 function closeModal(){const m=document.getElementById('modal');if(m)m.classList.remove('show');}
 
-function escAttr(s){return String(s).replace(/&/g,'&').replace(/"/g,'"').replace(/</g,'<').replace(/>/g,'>');}
+function escAttr(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function speakBtn(text){if(!speechAvailable())return '';return '<button class="speak-btn" type="button" data-say="'+escAttr(text)+'" aria-label="🔊">🔊</button>';}
 
 function roleIcon(role,size){
@@ -493,7 +493,7 @@ function applyTheme(theme,persist){
   updateThemeButton();
 }
 function toggleTheme(){applyTheme(currentTheme==='dark'?'light':'dark',true);}
-function escHtml(s){return String(s).replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>');}
+function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function endColorsText(){return '🎨 '+t('endColorsLabel')+': '+(settings.endColors?t('endColorsOn'):t('endColorsOff'));}
 function applyEndColorsSetting(){
   const on=!!(settings&&settings.endColors);
