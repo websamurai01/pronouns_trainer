@@ -62,7 +62,7 @@ function renderKeyMini(){
     q.options.forEach(function(role){html+='<button class="role-btn '+personClass(role)+'" type="button" data-kmrole="'+role+'">'+roleIcon(role,30)+'<span class="role-label">'+roleLabel(role)+'</span></button>';});
     html+='</div>';
   }else{
-    html+='<div class="section-intro" style="text-align:center;">'+t('roleQuestion')+'</div><div class="prompt-role '+personClass(q.role)+'" style="margin-bottom:8px;">'+roleIcon(q.role,44)+'<div class="role-label">'+roleLabel(q.role)+'</div></div>';
+    html+='<div class="section-intro" style="text-align:center;">'+t('pronQuestion')+'</div><div class="prompt-role '+personClass(q.role)+'" style="margin-bottom:8px;">'+roleIcon(q.role,44)+'<div class="role-label">'+roleLabel(q.role)+'</div></div>';
     html+='<div class="whole-options" id="km-options">';
     q.options.forEach(function(u){html+='<button class="whole-option he" lang="he" dir="rtl" type="button" data-kmpron="'+escAttr(u)+'">'+u+'</button>';});
     html+='</div>';
