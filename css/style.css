@@ -20,7 +20,7 @@ html[data-theme="dark"]{
   --shadow:0 8px 28px rgba(0,0,0,.45);--shadow-soft:0 4px 14px rgba(0,0,0,.3);
   --overlay:rgba(0,0,0,.65);
 }
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Roboto",sans-serif;min-height:100vh;min-height:100dvh;overscroll-behavior:none;-webkit-text-size-adjust:100%;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Roboto","Noto Serif Hebrew","Frank Ruhl Libre","David Libre","Noto Sans Hebrew",sans-serif;min-height:100vh;min-height:100dvh;overscroll-behavior:none;-webkit-text-size-adjust:100%;}
 body{display:flex;flex-direction:column;max-width:560px;margin:0 auto;background:radial-gradient(120% 60% at 50% 0%,var(--bg-glow) 0%,var(--bg) 55%,var(--bg2) 100%);padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);}
 .he{font-family:var(--hebrew);direction:rtl;unicode-bidi:isolate;}
 .role-1{color:var(--accent);}
