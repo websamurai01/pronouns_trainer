@@ -453,7 +453,7 @@ function heFormHTML(prepId,role,nikud,context){
   const plain=ctx==='practice'&&settings&&settings.endColors===false;
   if(plain){
     if(p.irregularRoles.indexOf(role)>=0){
-      return '<span class="he end-plain" data-endrole="'+roleNum+'" lang="he" dir="rtl">'+(nikud?f.p:f.u)+'</span><span class="irreg-mark" title="нерегулярная форма">•</span>';
+      return '<span class="he end-plain" data-endrole="'+roleNum+'" lang="he" dir="rtl">'+(nikud?f.p:f.u)+'</span><span class="irreg-mark" title="'+escAttr(t('irregularForm'))+'">•</span>';
     }
     if(nikud){
       const sp=splitNikud(prepId,role);
@@ -463,7 +463,7 @@ function heFormHTML(prepId,role,nikud,context){
     return '<span class="he" lang="he" dir="rtl"><span class="stem">'+parts.stem+'</span><span class="end-plain" data-endrole="'+roleNum+'">'+parts.end+'</span></span>';
   }
   if(p.irregularRoles.indexOf(role)>=0){
-    return '<span class="he he-end '+cls+'" data-endrole="'+roleNum+'" lang="he" dir="rtl">'+(nikud?f.p:f.u)+'</span><span class="irreg-mark" title="нерегулярная форма">•</span>';
+    return '<span class="he he-end '+cls+'" data-endrole="'+roleNum+'" lang="he" dir="rtl">'+(nikud?f.p:f.u)+'</span><span class="irreg-mark" title="'+escAttr(t('irregularForm'))+'">•</span>';
   }
   if(nikud){
     const sp=splitNikud(prepId,role);
@@ -573,12 +573,16 @@ function applyLanguage(){
   if(kbBtn){kbBtn.title=t('keyboardTitle');kbBtn.setAttribute('aria-label',t('keyboardTitle'));}
   const kbClose=document.getElementById('btn-keyboard-close');
   if(kbClose) kbClose.setAttribute('aria-label',t('keyboardHide'));
+  const modalClose=document.getElementById('modal-close');
+  if(modalClose) modalClose.setAttribute('aria-label',t('close'));
   const setBtn=document.getElementById('btn-settings');
   if(setBtn) setBtn.setAttribute('aria-label',t('settingsTitle'));
   phraseAnswered=false;phraseHintShown=false;
   renderCurrent();
   applyEndColorsSetting();
   applyNikudCheckSetting();
+  // The progress badge carries a translated tooltip.
+  updateProgress();
 }
 function setLang(code){
   if(currentLang===code) return;

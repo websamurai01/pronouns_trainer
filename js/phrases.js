@@ -389,7 +389,7 @@ function exportProgress(){
     document.body.appendChild(a);a.click();document.body.removeChild(a);
     setTimeout(function(){URL.revokeObjectURL(url);},1000);
     showToast(t('exported'));
-  }catch(e){showToast(t('importError'));}
+  }catch(e){showToast(t('exportError'));}
 }
 function importProgress(e){
   const file=e.target.files&&e.target.files[0];
@@ -433,7 +433,7 @@ function resetProgress(){
   recentWrong=[];history=[];currentQ=null;keyMiniQ=null;runState=null;speedState=null;
   pfxQ=null;pfxHistory=[];pfxSpeedState=null;pfxPhraseAnswered=false;
   updateProgress();renderCurrent();closeModal();
-  showToast(t('saved'));
+  showToast(t('resetDone'));
 }
 
 const PFX_RULES=[
