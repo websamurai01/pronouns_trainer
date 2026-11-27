@@ -438,7 +438,7 @@ function renderPfxSpeed(){
   if(!pfxSpeedState||!pfxSpeedState.running){
     if(!pfxSpeedState) pfxSpeedState={running:false,correct:0};
     const best=bestTimes.pfxSpeed||0;
-    let html='<div class="pfx-card"><div class="section-title">'+t('pfxModeSpeed')+'</div><div class="section-intro">'+t('pfxSpeedStart')+'</div>';
+    let html='<div class="pfx-card"><div class="section-title">'+t('pfxModeSpeed')+'</div>';
     if(best) html+='<div class="stat-pill" style="margin-bottom:10px;">'+t('pfxSpeedBest')+': <b>'+best+'</b></div>';
     html+='<button class="btn-primary" id="pfx-speed-start" type="button">'+t('pfxSpeedStart')+'</button></div>';
     area.innerHTML=html;

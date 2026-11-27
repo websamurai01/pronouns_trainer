@@ -728,7 +728,7 @@ function renderSpeed(){
   if(!speedState||!speedState.running){
     if(!speedState) speedState={running:false,correct:0};
     const best=bestTimes.speed||0;
-    let html='<div class="train-card"><div class="section-title">'+t('modeSpeed')+'</div><div class="section-intro">'+t('speedStart')+'</div>';
+    let html='<div class="train-card"><div class="section-title">'+t('modeSpeed')+'</div>';
     if(best) html+='<div class="stat-pill" style="margin-bottom:10px;">'+t('speedBest')+': <b>'+best+'</b></div>';
     html+='<button class="btn-primary" id="speed-start" type="button">'+t('speedStart')+'</button></div>';
     area.innerHTML=html;
