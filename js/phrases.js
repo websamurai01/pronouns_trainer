@@ -164,6 +164,8 @@ function renderListen(){
   });
   html+='</div><div id="result-box"></div></div>';
   area.innerHTML=html;
+  // A listening drill that waits for a click is not a listening drill.
+  speakHebrew(f.u);
   document.getElementById('listen-play').addEventListener('click',function(){speakHebrew(f.u);});
   document.getElementById('listen-options').querySelectorAll('[data-lrole]').forEach(function(btn){
     btn.addEventListener('click',function(){
