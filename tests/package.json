@@ -1,0 +1,11 @@
+{
+  "name": "pronouns-trainer-tests",
+  "private": true,
+  "description": "Tests for the static app; run with npm test",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "jsdom": "31.0.1"
+  }
+}
