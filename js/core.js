@@ -53,6 +53,7 @@ function t(key,vars){
 }
 function roleLabel(role){return currentLang==='en'?ROLE_LABEL_EN[role]:ROLE_LABEL_RU[role];}
 function translitOf(f){return currentLang==='en'?f.tEn:f.t;}
+function pfxTranslitOf(it){return currentLang==='en'?it.trEn:it.tr;}
 function trText(f){return settings.translit?translitOf(f):'';}
 function trDiv(f,cls){const s=trText(f);return s?'<div class="'+cls+'">'+s+'</div>':'';}
 function prepMeaning(p){return currentLang==='en'?p.meaningEn:p.meaningRu;}

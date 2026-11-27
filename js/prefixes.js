@@ -9,7 +9,7 @@ function pfxExamplesHTML(tag,count){
   if(!items.length) return '';
   let html='<div class="pfx-examples">';
   items.forEach(function(it){
-    html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl">'+it.p+'</span><span>'+it.tr+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
+    html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl">'+it.p+'</span><span>'+pfxTranslitOf(it)+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
   });
   html+='</div>';
   return html;
@@ -51,14 +51,14 @@ function openPrefixModal(id){
   html+='<div class="pfx-rule-text">'+(currentLang==='en'?p.meaningEn:p.meaningRu)+'</div>';
   html+='<div class="pfx-examples" style="margin-top:8px;">';
   p.forms.forEach(function(f){
-    html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl" style="font-size:22px;">'+f.p+'</span><span>'+f.tr+'</span><span>'+(currentLang==='en'?f.ruleEn:f.ruleRu)+'</span>'+speakBtn(f.p)+'</div>';
+    html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl" style="font-size:22px;">'+f.p+'</span><span>'+pfxTranslitOf(f)+'</span><span>'+(currentLang==='en'?f.ruleEn:f.ruleRu)+'</span>'+speakBtn(f.p)+'</div>';
   });
   html+='</div>';
   const examples=PFX_ITEMS.filter(function(it){return it.prefix===id;}).slice(0,2);
   if(examples.length){
     html+='<div class="section-title" style="margin-top:10px;">'+t('pfxExamples')+'</div>';
     examples.forEach(function(it){
-      html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl">'+it.p+'</span><span>'+it.tr+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
+      html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl">'+it.p+'</span><span>'+pfxTranslitOf(it)+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
     });
   }
   openModal(html,true);
@@ -208,7 +208,7 @@ function renderPfxLetter(){
 function pfxItemResultHTML(q,correct,extra){
   let html='<div class="result-box '+(correct?'ok':'bad')+'"><div class="result-title">'+(correct?'✅ '+t('correct'):'❌ '+t('wrong'))+'</div>';
   html+='<div class="result-he he" lang="he" dir="rtl">'+q.p+'</div>';
-  if(settings.translit) html+='<div class="result-translit">'+q.tr+'</div>';
+  if(settings.translit) html+='<div class="result-translit">'+pfxTranslitOf(q)+'</div>';
   html+='<div class="result-gloss">'+(currentLang==='en'?q.glossEn:q.glossRu)+'</div>';
   html+='<div class="result-gloss">'+t('pfxRuleLabel')+': '+pfxTagLabel(q.tag)+'</div>';
   html+=speakBtn(q.p);
@@ -507,7 +507,7 @@ function renderPfxPhrases(){
   pfxStart=performance.now();
   const item=findPfxItem(s.answer);
   const p=item?item.p:s.answer;
-  const tr=item?item.tr:'';
+  const tr=item?pfxTranslitOf(item):'';
   const glossRu=item?item.glossRu:s.ru;
   const glossEn=item?item.glossEn:s.en;
   const prefix=item?item.prefix:s.answer.charAt(0);
@@ -635,7 +635,7 @@ function openPfxHeat(prefix,tag){
   if(examples.length){
     html+='<div class="pfx-examples">';
     examples.forEach(function(it){
-      html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl" style="font-size:20px;">'+it.p+'</span><span>'+it.tr+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
+      html+='<div class="pfx-example"><span class="he" lang="he" dir="rtl" style="font-size:20px;">'+it.p+'</span><span>'+pfxTranslitOf(it)+'</span><span>'+(currentLang==='en'?it.glossEn:it.glossRu)+'</span>'+speakBtn(it.p)+'</div>';
     });
     html+='</div>';
   }else{

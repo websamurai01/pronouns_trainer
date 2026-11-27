@@ -189,6 +189,7 @@ const PREFIXES=[
     {p:'בִּ',tr:'би',tag:'sheva',ruleRu:'перед шва; перед י со шва',ruleEn:'before shva; before י with shva'}
   ]}
 ];
+PREFIXES.forEach(function(p){p.forms.forEach(function(f){f.trEn=romanize(f.tr);});});
 // ru is the nominative; the three case forms below it are what the Russian
 // glosses need after в (prepositional), к (dative) and из (genitive).
 const PFX_WORDS=[
@@ -316,7 +317,9 @@ function pfxRuleFor(prefix,pfxForm,tag){
   const f=p.forms.find(function(x){return x.p===pfxForm;})||p.forms.find(function(x){return x.tag===tag;})||p.forms[0];
   return {ru:f.ruleRu,en:f.ruleEn};
 }
-function addPfxItem(it){PFX_ITEMS.push(it);PFX_BY_ID[it.id]=it;}
+// The transliterations are written in Russian letters; English shows the
+// romanised twin, the same way prepositions and pronouns already do.
+function addPfxItem(it){it.trEn=romanize(it.tr);PFX_ITEMS.push(it);PFX_BY_ID[it.id]=it;}
 PFX_TABLE.forEach(function(row){
   const w=PFX_WORDS.find(function(x){return x.id===row.wordId;});
   if(!w) return;
