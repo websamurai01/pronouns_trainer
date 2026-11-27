@@ -399,7 +399,7 @@ const SENTENCES=[
   {id:14,he:'הוא שאל ___ אם אני בסדר.',ru:'Он спросил меня, в порядке ли я.',en:'He asked me if I was okay.',prep:'et',role:'1s'},
   {id:15,he:'הערב אני ישן ___.',ru:'Сегодня вечером я ночую у него.',en:'Tonight I am sleeping at his place.',prep:'etsel',role:'3ms'},
   {id:16,he:'אפשר לשבת ___?',ru:'Можно присесть с вами (м.)?',en:'May I sit with you pl. (m.)?',prep:'im',role:'2mp'},
-  {id:17,he:'אכפת ___ שאפתח חלון?',ru:'Тебе (м.) не помешает, если я открою окно?',en:'Do you (m.) mind if I open a window?',prep:'l',role:'2ms'},
+  {id:17,he:'אכפת ___ שאפתח חלון?',ru:'Ты (м.) не против, если я открою окно?',en:'Do you (m.) mind if I open a window?',prep:'l',role:'2ms'},
   {id:18,he:'שמעתי ___ בחדשות.',ru:'Я слышал о них (м.) в новостях.',en:'I heard about them (m.) on the news.',prep:'al',role:'3mp'},
   {id:19,he:'אני מאמין ___.',ru:'Я верю в тебя (м.).',en:'I believe in you (m.).',prep:'b',role:'2ms'},
   {id:20,he:'הם ביקשו ___ עזרה.',ru:'Они попросили у нас помощи.',en:'They asked us for help.',prep:'min',role:'1p',trap:true},
@@ -409,7 +409,7 @@ const SENTENCES=[
 ];
 
 const TRAPS=[
-  {ru:'Ждать, слушать, благодарить, помогать кого — в иврите ל: מחכה לך, מקשיב לך, מודה לך.',en:'Wait, listen, thank, help someone — Hebrew uses ל: מחכה לך, מקשיב לך, מודה לך.'},
+  {ru:'Ждать и слушать кого, благодарить кого, помогать кому — в иврите всё это ל: מחכה לך, מקשיב לך, מודה לך, עוזר לך.',en:'Wait for, listen to, thank and help someone — Hebrew uses ל for all of them: מחכה לך, מקשיב לך, מודה לך, עוזר לך.'},
   {ru:'Бояться и просить (у) — מ: מפחד ממך, מבקש ממך.',en:'Fear and ask (from) — מ: מפחד ממך, מבקש ממך.'},
   {ru:'Скучать по — אל; думать, мечтать, полагаться (о/на) — על.',en:'Miss someone — אל; think, dream, rely (about/on) — על.'},
   {ru:'«У меня есть» = יש לי (ל), а «у него дома» = אצלו (אצל). Это разные «у».',en:'“I have” = יש לי (ל), but “at his place” = אצלו (אצל). Different “at”.'},
