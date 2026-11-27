@@ -205,7 +205,10 @@ function renderPhrases(){
     phrasePos=0;
   }
   const s=SENTENCES[phraseQueue[phrasePos%phraseQueue.length]];
-  if(!phraseAnswered) s._start=performance.now();
+  // A re-render must not restart the clock: the same attempt keeps its start,
+  // a new phrase or a new drill mode starts a fresh one.
+  const timerKey=s.id+'|'+phrasePos+'|'+currentPhraseMode;
+  if(!phraseAnswered&&phraseTimerKey!==timerKey){phraseTimerKey=timerKey;phraseStart=performance.now();}
   const f=FORMS[s.prep][s.role];
   const parts=s.he.split('___');
   let html='<div class="section-title">'+t('phrasesTitle')+'</div>'+practiceTogglesHTML(true);
@@ -310,7 +313,7 @@ function phraseOptions(s){
   return shuffle(opts);
 }
 function finishPhrase(s,f,correct,given,reason){
-  const elapsed=performance.now()-(s._start||performance.now());
+  const elapsed=performance.now()-(phraseStart||performance.now());
   recordAnswer(s.prep+':'+s.role,correct,elapsed,given,currentPhraseMode==='choice'?'choice':'type');
   if(!correct) noteWrong(s.prep+':'+s.role);
   const blank=document.getElementById('phrase-blank');
