@@ -189,15 +189,17 @@ const PREFIXES=[
     {p:'בִּ',tr:'би',tag:'sheva',ruleRu:'перед шва; перед י со шва',ruleEn:'before shva; before י with shva'}
   ]}
 ];
+// ru is the nominative; the three case forms below it are what the Russian
+// glosses need after в (prepositional), к (dative) and из (genitive).
 const PFX_WORDS=[
-  {id:'bayit',p:'בַּיִת',u:'בית',tr:'байт',ru:'дом',en:'house',article:true},
-  {id:'sefer',p:'סֵפֶר',u:'ספר',tr:'сефер',ru:'книга',en:'book',article:true},
-  {id:'yeled',p:'יֶלֶד',u:'ילד',tr:'елед',ru:'ребёнок',en:'child',article:true},
-  {id:'perach',p:'פֶּרַח',u:'פרח',tr:'перах',ru:'цветок',en:'flower',article:true},
-  {id:'medina',p:'מְדִינָה',u:'מדינה',tr:'мдина',ru:'государство',en:'state, country',article:true},
-  {id:'yerushalayim',p:'יְרוּשָׁלַיִם',u:'ירושלים',tr:'ирушалайим',ru:'Иерусалим',en:'Jerusalem',article:false},
-  {id:'adam',p:'אָדָם',u:'אדם',tr:'адам',ru:'человек',en:'person',article:true},
-  {id:'ir',p:'עִיר',u:'עיר',tr:'ир',ru:'город',en:'city',article:true}
+  {id:'bayit',p:'בַּיִת',u:'בית',tr:'байт',ru:'дом',gen:'дома',dat:'дому',prep:'доме',en:'house',article:true},
+  {id:'sefer',p:'סֵפֶר',u:'ספר',tr:'сефер',ru:'книга',gen:'книги',dat:'книге',prep:'книге',en:'book',article:true},
+  {id:'yeled',p:'יֶלֶד',u:'ילד',tr:'елед',ru:'ребёнок',gen:'ребёнка',dat:'ребёнку',prep:'ребёнке',en:'child',article:true},
+  {id:'perach',p:'פֶּרַח',u:'פרח',tr:'перах',ru:'цветок',gen:'цветка',dat:'цветку',prep:'цветке',en:'flower',article:true},
+  {id:'medina',p:'מְדִינָה',u:'מדינה',tr:'мдина',ru:'страна',gen:'страны',dat:'стране',prep:'стране',en:'country',article:true},
+  {id:'yerushalayim',p:'יְרוּשָׁלַיִם',u:'ירושלים',tr:'ирушалайим',ru:'Иерусалим',gen:'Иерусалима',dat:'Иерусалиму',prep:'Иерусалиме',en:'Jerusalem',article:false},
+  {id:'adam',p:'אָדָם',u:'אדם',tr:'адам',ru:'человек',gen:'человека',dat:'человеку',prep:'человеке',en:'person',article:true},
+  {id:'ir',p:'עִיר',u:'עיר',tr:'ир',ru:'город',gen:'города',dat:'городу',prep:'городе',en:'city',article:true}
 ];
 const PFX_TABLE=[
   {wordId:'bayit',rows:{
@@ -298,12 +300,15 @@ const PFX_TRAPS=[
 ];
 const PFX_ITEMS=[];
 const PFX_BY_ID={};
-function pfxGloss(prefix,wordRu,wordEn,art){
-  const gRu={'ב':'в','ל':'к/для','כ':'как','מ':'из','ו':'и','ה':'the','ש':'что/который'}[prefix]||'';
-  const gEn={'ב':'in','ל':'to/for','כ':'like','מ':'from','ו':'and','ה':'the','ש':'that/which'}[prefix]||'';
-  if(prefix==='ה') return {ru:'определённый артикль: '+wordRu,en:'the '+wordEn};
-  if(art) return {ru:gRu+' (этот/эта) '+wordRu,en:gEn+' the '+wordEn};
-  return {ru:gRu+' '+wordRu,en:gEn+' '+wordEn};
+// Russian has no article, so both the bare noun and the definite one read the
+// same there; the difference stays visible in English and in the Hebrew form.
+function pfxGloss(prefix,word,art){
+  if(prefix==='ה') return {ru:'определённый артикль: '+word.ru,en:'the '+word.en};
+  const ru={'ב':'в '+word.prep,'ל':'к '+word.dat,'כ':'как '+word.ru,'מ':'из '+word.gen,'ו':'и '+word.ru,'ש':'что/который'}[prefix];
+  const noun=(art?'the ':'a ')+word.en;
+  const en={'ב':'in '+noun,'ל':'to '+noun,'כ':'like '+noun,'מ':'from '+noun,'ו':'and '+noun,'ש':'that/which'}[prefix];
+  if(!ru||!en) return {ru:word.ru,en:word.en};
+  return {ru:ru,en:en};
 }
 function pfxRuleFor(prefix,pfxForm,tag){
   const p=PREFIXES.find(function(x){return x.id===prefix;});
@@ -322,7 +327,7 @@ PFX_TABLE.forEach(function(row){
       if(!m) return;
       const tag=m[3];
       const art=tag==='article';
-      const gl=pfxGloss(prefix,w.ru,w.en,art);
+      const gl=pfxGloss(prefix,w,art);
       const rule=pfxRuleFor(prefix,m[2],tag);
       addPfxItem({id:'w_'+w.id+'_'+prefix+'_'+(art?'art':'plain'),prefix:prefix,prefixes:[prefix],p:m[1],u:stripNikud(m[1]),tr:m[4],word:w.u,wordP:w.p,art:art,pfxForm:m[2],tag:tag,group:prefix+'|'+w.u,key:'pfx:'+prefix+':'+tag,glossRu:gl.ru,glossEn:gl.en,ruleRu:rule.ru,ruleEn:rule.en});
     });
